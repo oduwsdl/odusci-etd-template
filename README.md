@@ -151,11 +151,11 @@ See the "Copying a project" (<https://www.overleaf.com/learn/how-to/Copying_a_pr
 
 7. **Appendix**
 
-* The file Chapters/98_appendices.tex contains an example of specifying the appendices. The file starts with the keyword \\appendix and each new appendix should begin with the line \\achapter{Title of Appendix}.
+* The file Chapters/98_appendices.tex contains an example of specifying the appendices. The file starts with the keyword ```\appendix``` and each new appendix should begin with the line ```\achapter{Title of Appendix}```.
 
 8. **Vita**
 
-* The file Chapters/99_vita.tex contains an example of specifying the vita page. All of the content must be placed inside the \\vita{} command, and the last line should be \\vitapage. It is important to note that the vita is limited to a maximum of 1 page.
+* The file Chapters/99_vita.tex contains an example of specifying the vita page. All of the content must be placed inside the ```\vita{}``` command, and the last line should be ```\vitapage```. It is important to note that the vita is limited to a maximum of 1 page.
 
 ## **Support**
 
