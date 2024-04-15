@@ -11,12 +11,12 @@ Welcome to the LaTeX Electronic Thesis and Dissertation (ETD) template for the C
 
 The template repository contains the following files and directories:
 
-- **main.tex:** Main LaTeX document file, demonstrating various cases
-- **minimal.tex:** LaTeX document file containing the minimal working example
-- **Chapters/:** Folder containing .tex files for individual chapters.
-- **Figures/:** Folder for storing figures.
-- **ref.bib:** BibTeX bibliography file.
-- **odusci.sty:** Style file for the College of Science Electronic Thesis and Dissertation (ETD)
+- **[main.tex](main.tex):** Main LaTeX document file, demonstrating various cases
+- **[minimal.tex](minimal.tex):** LaTeX document file containing the minimal working example
+- **[Chapters/](Chapters):** Folder containing .tex files for individual chapters.
+- **[Figures/](Figures):** Folder for storing figures.
+- **[ref.bib](ref.bib):** BibTeX bibliography file.
+- **[odusci.sty](odusci.sty):** Style file for the College of Science Electronic Thesis and Dissertation (ETD)
 - **README.md:** This README file providing instructions for using the template.
 
 ## **ETD LaTeX template on Overleaf**
@@ -29,12 +29,12 @@ See the "Copying a project" (<https://www.overleaf.com/learn/how-to/Copying_a_pr
 
 ## **Getting Started**
 
-1. **Font Size, Document Class, and Margins:**
+#### **Font Size, Document Class, and Margins:**
 - The font size throughout the document is set to 12 points, as required by the College of Sciences.
 - The document class used is ‘report’, suitable for longer documents like dissertations.
 - The margin is set uniformly to 1 inch around the document
 
-2. **‘odusci’ Package options \[main.tex]:**
+#### **‘odusci’ Package options \[main.tex]:**
 
 - The ‘odusci’ package is the default choice and it is used for PhD dissertations.
 
@@ -42,13 +42,13 @@ See the "Copying a project" (<https://www.overleaf.com/learn/how-to/Copying_a_pr
 
 - For a Master's thesis, you can use the thesis option with the odusci package.
 
-  ```\usepackage\[thesis]{odusci}```
+  ```\usepackage[thesis]{odusci}```
 
 - The diss option can be used for PhD dissertations if desired.
 
-  ```\usepackage\[diss]{odusci}```
+  ```\usepackage[diss]{odusci}```
 
-3. **References**
+#### **References**
     1. **Bibliography \[ref.bib]**
 
        Ensure that your bibliography file (ref.bib) contains all the necessary references for your document.
@@ -69,13 +69,13 @@ See the "Copying a project" (<https://www.overleaf.com/learn/how-to/Copying_a_pr
 
        Select the appropriate bibliography style for your field by uncommenting one of the following lines in main.tex:
 
-        ```% \usepackage\[style=**ieee**, sorting=nyt, maxnames=10, minnames=10]{biblatex}```
+        ```% \usepackage[style=**ieee**, sorting=nyt, maxnames=10, minnames=10]{biblatex}```
 
-        ```% \usepackage\[style=**apa**, sorting=nyt, maxnames=10, minnames=10]{biblatex}```
+        ```% \usepackage[style=**apa**, sorting=nyt, maxnames=10, minnames=10]{biblatex}```
 
-        ```% \usepackage\[style=**science**, sorting=nyt, maxnames=10, minnames=10]{biblatex}```
+        ```% \usepackage[style=**science**, sorting=nyt, maxnames=10, minnames=10]{biblatex}```
 
-4. **Front Matter**
+#### **Front Matter**
     1. **Title Page \[main.tex]**
 
        * Add the title, author name, prior degrees, department, submit date, and committee.
@@ -131,7 +131,7 @@ See the "Copying a project" (<https://www.overleaf.com/learn/how-to/Copying_a_pr
 
           By default, the option is set to exclude the nomenclature page. If you wish to have a nomenclature page, you can change ‘\nomenclaturefalse’ to ‘\nomenclaturetrue’.
 
-5. **Chapters and Sections**
+#### **Chapters and Sections**
 
 * It is recommended to put the contents of each chapter in a separate .tex file in the "Chapters" folder.
 
@@ -139,7 +139,7 @@ See the "Copying a project" (<https://www.overleaf.com/learn/how-to/Copying_a_pr
 
 * Sections and subsections can be created as normal with ```\section{Section Title}``` and ```\subsection{Section Title}```.
 
-6. **Figures and Tables**
+#### **Figures and Tables**
 
 * Figures, tables, and equations can be added as normal. There are several examples of these throughout the example document:
 
@@ -149,11 +149,11 @@ See the "Copying a project" (<https://www.overleaf.com/learn/how-to/Copying_a_pr
   - **equation** - 02_background.tex
   - **table** - 03_relatedwork.tex
 
-7. **Appendix**
+#### **Appendix**
 
 * The file Chapters/98_appendices.tex contains an example of specifying the appendices. The file starts with the keyword ```\appendix``` and each new appendix should begin with the line ```\achapter{Title of Appendix}```.
 
-8. **Vita**
+#### **Vita**
 
 * The file Chapters/99_vita.tex contains an example of specifying the vita page. All of the content must be placed inside the ```\vita{}``` command, and the last line should be ```\vitapage```. It is important to note that the vita is limited to a maximum of 1 page.
 
