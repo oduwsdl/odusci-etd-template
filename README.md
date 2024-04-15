@@ -49,99 +49,104 @@ See the "Copying a project" (<https://www.overleaf.com/learn/how-to/Copying_a_pr
   ```\usepackage[diss]{odusci}```
 
 #### **References**
-    1. **Bibliography \[ref.bib]**
 
-       Ensure that your bibliography file (ref.bib) contains all the necessary references for your document.
+1. **Bibliography \[ref.bib]**
 
-       If you want to use a different filename for your references, you must change the file referenced in \addbibresource{ref.bib} in your main .tex file.     
+- Ensure that your bibliography file (ref.bib) contains all the necessary references for your document.
 
-    3. **Reference Citation Style \[main.tex]**
+- If you want to use a different filename for your references, you must change the file referenced in \addbibresource{ref.bib} in your main .tex file.     
 
-       The style file uses biblatex for formatting references. See "Bibliography management with biblatex"(<https://www.overleaf.com/learn/latex/Bibliography_management_with_biblatex>) for more information.
+2. **Reference Citation Style \[main.tex]**
+   
+- The style file uses biblatex for formatting references. See "Bibliography management with biblatex"(<https://www.overleaf.com/learn/latex/Bibliography_management_with_biblatex>) for more information.
 
-       The College of Sciences is allowing 3 different options for bibliography styles:
+- The College of Sciences is allowing 3 different options for bibliography styles:
+    - IEEE - commonly used by Computer Science, Physics, Math
+    - APA - commonly used by Psychology
+    - Science - commonly used by other sciences
 
-        - IEEE - commonly used by Computer Science, Physics, Math
-        - APA - commonly used by Psychology
-        - Science - commonly used by other sciences
+- See "Biblatex bibliography styles" (<https://www.overleaf.com/learn/latex/Biblatex_bibliography_styles>) for examples of each of these.
 
-       See "Biblatex bibliography styles" (<https://www.overleaf.com/learn/latex/Biblatex_bibliography_styles>) for examples of each of these.
+- Select the appropriate bibliography style for your field by uncommenting one of the following lines in main.tex:
 
-       Select the appropriate bibliography style for your field by uncommenting one of the following lines in main.tex:
+    ```% \usepackage[style=**ieee**, sorting=nyt, maxnames=10, minnames=10]{biblatex}```
 
-        ```% \usepackage[style=**ieee**, sorting=nyt, maxnames=10, minnames=10]{biblatex}```
+    ```% \usepackage[style=**apa**, sorting=nyt, maxnames=10, minnames=10]{biblatex}```
 
-        ```% \usepackage[style=**apa**, sorting=nyt, maxnames=10, minnames=10]{biblatex}```
-
-        ```% \usepackage[style=**science**, sorting=nyt, maxnames=10, minnames=10]{biblatex}```
+    ```% \usepackage[style=**science**, sorting=nyt, maxnames=10, minnames=10]{biblatex}```
 
 #### **Front Matter**
-    1. **Title Page \[main.tex]**
 
-       * Add the title, author name, prior degrees, department, submit date, and committee.
-       
-       * If the prior degrees are outside of the US, use the following format. (University and Country all in a single line)
-       ```
-       \degrees{B.S. July 2017, University of Oxford, United Kingdom. \\
-       M.S. July 2020, University of Oxford, United Kingdom.}
-       ```
+1. **Title Page \[main.tex]**
 
-       * Submit date can only be one of the below.        
-       ```
-       \submitdate{May 2022} - Submit date for May graduates
-       \submitdate{August 2022} - Submit date for August graduates
-       \submitdate{December 2022} - Submit date for December graduates
-       ```
+- Add the title, author name, prior degrees, department, submit date, and committee.
+   
+- If the prior degrees are outside of the US, use the following format. (University and Country all in a single line)
+  ```
+  \degrees{B.S. July 2017, University of Oxford, United Kingdom. \\
+  M.S. July 2020, University of Oxford, United Kingdom.}
+  ```
 
-       * If you have co-advisers, use the following format.
-         * In **\[main.tex]**
-         ```\coadvisers{Director Name}
-            \coadvisers{Director Name}
-            \member{Member Name}
-            \member{Member Name}
-            \member{Member Name}
-         ```
-         
-         * In **\[odusci.sty]**
-           
-         ```\onedirectorfalse```
-       
-         By default, the option is set to have one advisor. If you wish to have co-advisers, please change ‘\onedirectortrue’ to ‘\onedirectorfalse’.
+- Submit date can only be one of the below.        
+  ```
+  \submitdate{May 2022} - Submit date for May graduates
+  \submitdate{August 2022} - Submit date for August graduates
+  \submitdate{December 2022} - Submit date for December graduates
+  ```
 
-    3. **Abstract \[main.tex]**
-       * Please insert your abstract here, ensuring it does not exceed a maximum of 350 words.
-       * The upper sections of the page, including the title, author, university, and director information, will be automatically generated based on the input provided on the title page. You do not need to make any modifications to the template regarding this section.
-    1. **Copyrights \[main.tex]**
-       * This page will be automatically generated based on the input of the author's name on the title page. You do not need to make any modifications to the template regarding this section.
-    1. **Dedication \[main.tex]**
-       * Please include your dedication here. Ensure that it does not exceed one page in length.
-       * This section is used to recognize those who have supported you during your graduate studies.
-    1. **Acknowledgments \[main.tex]**
-       * This section is different from the dedication page. Recognition of individuals who contributed to your academic research should be provided here.
-    1. **Table of Contents, List of Tables, and List of Figures**
-       * These sections will be automatically generated based on the content of your document. You do not need to make any modifications to the template regarding these sections. LaTeX will handle the generation of the table of contents, list of tables, and list of figures for you.
-    1. **Nomenclature**
-        * In **\[main.tex]**
-          
-          The nomenclature page provides a comprehensive list of symbols and abbreviations used throughout the document, along with their corresponding definitions or explanations. Add your nomenclature in the provided format in the template. The inclusion of a nomenclature page is optional.
+- If you have co-advisers, use the following format.
+  * In **\[main.tex]**
+  ```
+  \coadvisers{Director Name}
+  \coadvisers{Director Name}
+  \member{Member Name}
+  \member{Member Name}
+  \member{Member Name}
+  ```
+     
+  * In **\[odusci.sty]**
+  ```\onedirectorfalse```
+   
+  By default, the option is set to have one advisor. If you wish to have co-advisers, please change ‘\onedirectortrue’ to ‘\onedirectorfalse’.
 
-        * In **\[odusci.sty]**
-                    
-          ```\nomenclaturetrue```
+2. **Abstract \[main.tex]**
+- Please insert your abstract here, ensuring it does not exceed a maximum of 350 words.
+- The upper sections of the page, including the title, author, university, and director information, will be automatically generated based on the input provided on the title page. You do not need to make any modifications to the template regarding this section.
+  
+3. **Copyrights \[main.tex]**
+- This page will be automatically generated based on the input of the author's name on the title page. You do not need to make any modifications to the template regarding this section.
+     
+4. **Dedication \[main.tex]**
+- Please include your dedication here. Ensure that it does not exceed one page in length.
+- This section is used to recognize those who have supported you during your graduate studies.
+     
+5. **Acknowledgments \[main.tex]**
+- This section is different from the dedication page. Recognition of individuals who contributed to your academic research should be provided here.
+     
+6. **Table of Contents, List of Tables, and List of Figures**
+- These sections will be automatically generated based on the content of your document. You do not need to make any modifications to the template regarding these sections. LaTeX will handle the generation of the table of contents, list of tables, and list of figures for you.
+     
+7. **Nomenclature**
+- In **\[main.tex]**
 
-          By default, the option is set to exclude the nomenclature page. If you wish to have a nomenclature page, you can change ‘\nomenclaturefalse’ to ‘\nomenclaturetrue’.
+  The nomenclature page provides a comprehensive list of symbols and abbreviations used throughout the document, along with their corresponding definitions or explanations. Add your nomenclature in the provided format in the template. The inclusion of a nomenclature page is optional.
+
+- In **\[odusci.sty]**
+  ```\nomenclaturetrue```
+
+  By default, the option is set to exclude the nomenclature page. If you wish to have a nomenclature page, you can change ‘\nomenclaturefalse’ to ‘\nomenclaturetrue’.
 
 #### **Chapters and Sections**
 
-* It is recommended to put the contents of each chapter in a separate .tex file in the "Chapters" folder.
+- It is recommended to put the contents of each chapter in a separate .tex file in the "Chapters" folder.
 
-* Start a new chapter with ```\chapter{Chapter Title}```
+- Start a new chapter with ```\chapter{Chapter Title}```
 
-* Sections and subsections can be created as normal with ```\section{Section Title}``` and ```\subsection{Section Title}```.
+- Sections and subsections can be created as normal with ```\section{Section Title}``` and ```\subsection{Section Title}```.
 
 #### **Figures and Tables**
 
-* Figures, tables, and equations can be added as normal. There are several examples of these throughout the example document:
+- Figures, tables, and equations can be added as normal. There are several examples of these throughout the example document:
 
   - **figure** - 01_introduction.tex
   - **subfigure** - 02_background.tex
@@ -151,17 +156,17 @@ See the "Copying a project" (<https://www.overleaf.com/learn/how-to/Copying_a_pr
 
 #### **Appendix**
 
-* The file Chapters/98_appendices.tex contains an example of specifying the appendices. The file starts with the keyword ```\appendix``` and each new appendix should begin with the line ```\achapter{Title of Appendix}```.
+- The file Chapters/98_appendices.tex contains an example of specifying the appendices. The file starts with the keyword ```\appendix``` and each new appendix should begin with the line ```\achapter{Title of Appendix}```.
 
 #### **Vita**
 
-* The file Chapters/99_vita.tex contains an example of specifying the vita page. All of the content must be placed inside the ```\vita{}``` command, and the last line should be ```\vitapage```. It is important to note that the vita is limited to a maximum of 1 page.
+- The file Chapters/99_vita.tex contains an example of specifying the vita page. All of the content must be placed inside the ```\vita{}``` command, and the last line should be ```\vitapage```. It is important to note that the vita is limited to a maximum of 1 page.
 
 ## **Support**
 
-College of Sciences Guidelines for Submitting a Thesis/Dissertation for Review:
+- College of Sciences Guidelines for Submitting a Thesis/Dissertation for Review:
 <https://www.odu.edu/sci/students/graduate/thesis>
 
-Overleaf Documentation:
+- Overleaf Documentation:
 <https://www.overleaf.com/learn>
 
