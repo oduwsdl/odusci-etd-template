@@ -131,4 +131,37 @@ See the "Copying a project" (<https://www.overleaf.com/learn/how-to/Copying_a_pr
 
           By default, the option is set to exclude the nomenclature page. If you wish to have a nomenclature page, you can change ‘\nomenclaturefalse’ to ‘\nomenclaturetrue’.
 
+5. **Chapters and Sections**
+
+* It is recommended to put the contents of each chapter in a separate .tex file in the "Chapters" folder.
+
+* Start a new chapter with ```\chapter{Chapter Title}```
+
+* Sections and subsections can be created as normal with ```\section{Section Title}``` and ```\subsection{Section Title}```.
+
+6. **Figures and Tables**
+
+* Figures, tables, and equations can be added as normal. There are several examples of these throughout the example document:
+
+  - **figure** - 01_introduction.tex
+  - **subfigure** - 02_background.tex
+  - **landscape figure** - 02_background.tex
+  - **equation** - 02_background.tex
+  - **table** - 03_relatedwork.tex
+
+7. **Appendix**
+
+* The file Chapters/98_appendices.tex contains an example of specifying the appendices. The file starts with the keyword \\appendix and each new appendix should begin with the line \\achapter{Title of Appendix}.
+
+8. **Vita**
+
+* The file Chapters/99_vita.tex contains an example of specifying the vita page. All of the content must be placed inside the \\vita{} command, and the last line should be \\vitapage. It is important to note that the vita is limited to a maximum of 1 page.
+
+## **Support**
+
+College of Sciences Guidelines for Submitting a Thesis/Dissertation for Review:
+<https://www.odu.edu/sci/students/graduate/thesis>
+
+Overleaf Documentation:
+<https://www.overleaf.com/learn>
 
