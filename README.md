@@ -74,3 +74,61 @@ See the "Copying a project" (<https://www.overleaf.com/learn/how-to/Copying_a_pr
         ```% \usepackage\[style=**apa**, sorting=nyt, maxnames=10, minnames=10]{biblatex}```
 
         ```% \usepackage\[style=**science**, sorting=nyt, maxnames=10, minnames=10]{biblatex}```
+
+4. **Front Matter**
+    1. **Title Page \[main.tex]**
+
+       * Add the title, author name, prior degrees, department, submit date, and committee.
+       
+       * If the prior degrees are outside of the US, use the following format. (University and Country all in a single line)
+       ```
+       \degrees{B.S. July 2017, University of Oxford, United Kingdom. \\
+       M.S. July 2020, University of Oxford, United Kingdom.}
+       ```
+
+       * Submit date can only be one of the below.        
+       ```
+       \submitdate{May 2022} - Submit date for May graduates
+       \submitdate{August 2022} - Submit date for August graduates
+       \submitdate{December 2022} - Submit date for December graduates
+       ```
+
+       * If you have co-advisers, use the following format.
+         * In **\[main.tex]**
+         ```\coadvisers{Director Name}
+            \coadvisers{Director Name}
+            \member{Member Name}
+            \member{Member Name}
+            \member{Member Name}
+         ```
+         
+         * In **\[odusci.sty]**
+           
+         ```\onedirectorfalse```
+       
+         By default, the option is set to have one advisor. If you wish to have co-advisers, please change ‘\onedirectortrue’ to ‘\onedirectorfalse’.
+
+    3. **Abstract \[main.tex]**
+       * Please insert your abstract here, ensuring it does not exceed a maximum of 350 words.
+       * The upper sections of the page, including the title, author, university, and director information, will be automatically generated based on the input provided on the title page. You do not need to make any modifications to the template regarding this section.
+    1. **Copyrights \[main.tex]**
+       * This page will be automatically generated based on the input of the author's name on the title page. You do not need to make any modifications to the template regarding this section.
+    1. **Dedication \[main.tex]**
+       * Please include your dedication here. Ensure that it does not exceed one page in length.
+       * This section is used to recognize those who have supported you during your graduate studies.
+    1. **Acknowledgments \[main.tex]**
+       * This section is different from the dedication page. Recognition of individuals who contributed to your academic research should be provided here.
+    1. **Table of Contents, List of Tables, and List of Figures**
+       * These sections will be automatically generated based on the content of your document. You do not need to make any modifications to the template regarding these sections. LaTeX will handle the generation of the table of contents, list of tables, and list of figures for you.
+    1. **Nomenclature**
+        * In **\[main.tex]**
+          
+          The nomenclature page provides a comprehensive list of symbols and abbreviations used throughout the document, along with their corresponding definitions or explanations. Add your nomenclature in the provided format in the template. The inclusion of a nomenclature page is optional.
+
+        * In **\[odusci.sty]**
+                    
+          ```\nomenclaturetrue```
+
+          By default, the option is set to exclude the nomenclature page. If you wish to have a nomenclature page, you can change ‘\nomenclaturefalse’ to ‘\nomenclaturetrue’.
+
+
