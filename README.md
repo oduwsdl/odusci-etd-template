@@ -61,12 +61,10 @@ Most of the customization you need to make is isolated to `main.tex`. Do not edi
    
 - The style file uses the `biblatex` Package for formatting references. See ["Bibliography management with biblatex"](https://www.overleaf.com/learn/latex/Bibliography_management_with_biblatex) for more information.
 
-- The College of Sciences is allowing 3 different options for bibliography styles:
+- The College of Sciences is allowing 3 different options for bibliography styles (see ["Biblatex bibliography styles"](https://www.overleaf.com/learn/latex/Biblatex_bibliography_styles) for examples of each of these):
     - IEEE - commonly used by Computer Science, Physics, Math
     - APA - commonly used by Psychology
     - Science - commonly used by other sciences
-
-- See ["Biblatex bibliography styles"](https://www.overleaf.com/learn/latex/Biblatex_bibliography_styles) for examples of each of these.
 
 - Select the appropriate bibliography style for your field by uncommenting one of the following lines in `main.tex`:
 
