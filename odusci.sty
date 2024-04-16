@@ -6,7 +6,6 @@
 % This class is adapted from a package named, "ODUthesis", originally written by Dr. J. W. Van Orden, Professor, Department of Physics and the “wsdlthesis” class file modified by the Web Science and Digital Libraries (WS-DL) Research Group alumni Dr. Sawood Alam, Department of Computer Science to suit their group's needs.
 
 
-
 %%%%% Required Packages %%%%%
 
 
@@ -22,6 +21,7 @@
 %\usepackage[nature]{}
 
 %The margin should be consistent around the document: 1 inch
+% \usepackage[margin=1in, headsep=0.5in, includefoot]{geometry}
 \usepackage[margin=1in, headsep=0.5in]{geometry}
 % \usepackage[margin=1in]{geometry}
 
@@ -73,6 +73,7 @@
 %Remove \onedirectortrue if Co-Directors available
 \newif\ifonedirector
 \onedirectortrue
+% \onedirectorfalse
 
 %%%%% References %%%%%
 
@@ -206,7 +207,11 @@
                 \vspace{0.42cm}
                 \@author\\
                 Old Dominion University, \number\the\year\\
+                % \ifonedirector
                 Director: Dr. \@principaladviser
+                % \else
+                % Co-Directors:\@coadvisers
+                % \fi
                 \vspace{1.13cm}
             
         }
@@ -462,7 +467,7 @@
  \def\baselinestretch{1.0}\@normalsize
  {\setlength{\parskip}{12\p@} \@starttoc{lot}}%
  \addtocontents{lot}{\noindent Table\hfill Page\par}
- %\addtocontents{lot}{\protect \vspace{-12pt}}
+ % \addtocontents{lot}{\protect \vspace{-12pt}}
 }
 
 
@@ -553,8 +558,8 @@
 \def\@section[#1]#2{\ifnum \c@secnumdepth >\m@ne
                          \refstepcounter{section}%
                          \addcontentsline{toc}{section}%
-                        {\protect\enskip\quad\!\numberline{\thesection}\uppercase{#1}}
-                            %\enskip\quad\! to indent the section number and title to fall under "T" in INTRODUCTION
+                        {\protect\hspace{0.6cm}\!\numberline{\thesection}\uppercase{#1}}
+                            %\enskip\quad\! to indent the section number and title to fall under "T" in INTRODUCTION in toc
                     \else
                       \addcontentsline{toc}{section}{\uppercase{#1}}%
                     \fi
@@ -609,7 +614,7 @@
                          \refstepcounter{chapter}%
                          \typeout{\@chapapp\space\thechapter}%
                          \addcontentsline{toc}{section}%
-                                   {\protect\enskip\quad\!\numberline{\thechapter.}\uppercase{#1}}%
+                                   {\protect\hspace{0.7cm}\!\numberline{\thechapter.}\uppercase{#1}}%To align the appendix title under "D" in APPENDICES in toc
                     \else
                       \addcontentsline{toc}{section}{\uppercase{#1}}%
                     \fi
@@ -697,8 +702,6 @@
 \addto\captionsenglish{\renewcommand{\appendixname}{APPENDIX}}
 
 
-
-
 \newcommand{\labelchaptersintableofcontents}{%
      \addtocontents{toc}{\vspace*{0.42cm}} %Gap between list of figures and "chapter" in TOC
     \addtocontents{toc}{\noindent Chapter}
@@ -716,9 +719,20 @@
   \gdef\thechapter{\@Alph \c@chapter}
 %   \gdef\thechapter{\hspace{5mm}\@Alph \c@chapter}
   }
-  
-  
-  
+% To wrap the text in the list of figures and the list of tables under the numbering. Credit goes to Keegan Sherman for their help with this fix.  
+\usepackage{titletoc}
+\titlecontents{table}[0mm] % Set up list of tables
+    {}
+    {\thecontentslabel\quad}
+    {}
+    {\dotfill\thecontentspage}
+    
+\titlecontents{figure}[0mm] % Set up list of figures
+    {}
+    {\thecontentslabel\quad}
+    {}
+    {\dotfill\thecontentspage}  
+    
  %%%% PNAS Style %%%%
  
  
