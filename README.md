@@ -1,6 +1,6 @@
 # ODU College of Sciences LaTeX ETD Template
 
-Welcome to the LaTeX Electronic Thesis and Dissertation (ETD) template for the College of Sciences at Old Dominion University. This template is designed to assist students in formatting their theses and dissertations according to the guidelines provided by the college.
+Welcome to the LaTeX Electronic Thesis and Dissertation (ETD) template for the College of Sciences at Old Dominion University. This template is designed to assist students in formatting their theses and dissertations according to the guidelines provided by the university. Those using this template must still abide by the guidelines and formatting requirements found in the [ODU Guide for Preparation of Theses and Dissertations](https://www.odu.edu/graduateschool/thesis-dissertation-preparation-submission) ([PDF](https://www.odu.edu/sites/default/files/2024/documents/thesis-dissertation-guide-03-2024.pdf), last updated March 2024).
 
 ## Before You Begin
 
