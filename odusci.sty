@@ -1,58 +1,45 @@
-%  By Himarsha R. Jayanetti
-%  March 23, 2023
+%  By Himarsha R. Jayanetti and Dr. Michele C. Weigle
+%  April 16, 2024
+%  https://github.com/oduwsdl/odusci-etd-template
 
-% This file is meant to be used as a class named, “CoS_PhD”.  The formatting of this class corresponds to "The Old Dominion University Guide for the Preparation of Theses and Dissertation" and Input from CoS. 
+% This file is to be used as a class named, “odusci”.  The formatting of this class corresponds to "The Old Dominion University Guide for the Preparation of Theses and Dissertation" and Input from the College of Science at ODU. 
 
 % This class is adapted from a package named, "ODUthesis", originally written by Dr. J. W. Van Orden, Professor, Department of Physics and the “wsdlthesis” class file modified by the Web Science and Digital Libraries (WS-DL) Research Group alumni Dr. Sawood Alam, Department of Computer Science to suit their group's needs.
 
 
 %%%%% Required Packages %%%%%
 
-
-\RequirePackage{afterpage} %needed for manual Page Head fix
-\RequirePackage{atbegshi} % needed for \shipout command
-\usepackage{titlecaps}
-\Addlcwords{all of the and a an is before on for but with in as the etc to if}
-
-\usepackage[T1]{fontenc}
-\usepackage{mathptmx}
-
-% for reference style - naturemag, as requested by Dr. Greene
-%\usepackage[nature]{}
-
-%The margin should be consistent around the document: 1 inch
-% \usepackage[margin=1in, headsep=0.5in, includefoot]{geometry}
-\usepackage[margin=1in, headsep=0.5in]{geometry}
-% \usepackage[margin=1in]{geometry}
-
 %Sub-figures
 \usepackage{floatrow}
 \floatsetup[table]{capposition=top}
 \usepackage[label font=bf,labelformat=simple]{subfig}
-
-% caption
 \usepackage[labelsep=period]{caption}
+\floatsetup[figure]{style=plain,subcapbesideposition=top}
+%For sub-figures labeled as A, B, C, ...
+\renewcommand{\thesubfigure}{\Alph{subfigure}}
+% caption
 \DeclareCaptionListFormat{simple}{#1#2.}
 \captionsetup{justification=raggedright,singlelinecheck=false,labelsep=period} %for left aligning the figure captions
 \captionsetup{listformat=simple}
+\usepackage{graphicx}
+\usepackage{rotating} %For rotating large figure and caption lengthwise (landscape position)
+\usepackage{indentfirst}
+\usepackage{afterpage}
+\usepackage{ragged2e}
+\usepackage{fancyhdr}
+\usepackage{changepage}
+\usepackage{enumitem}
+\RequirePackage{afterpage} %needed for manual Page Head fix
+\RequirePackage{atbegshi} % needed for \shipout command
+\usepackage{titlecaps}
+\Addlcwords{all of the and a an is before on for but with in as the etc to if}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
 
- %Two double spaces above and below figures 
-\setlength{\intextsep}{1.69cm}
-\setlength{\textfloatsep}{1.69cm}
-\setlength{\floatsep}{1.69cm}
-
-% MCW - refs (using biblatex) - MAKE STYLE AN OPTION (or DEPT an option)
+%%%%%  References (using biblatex) %%%%% 
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
-
-% DOC: https://www.ctan.org/pkg/biblatex-ieee?lang=en
-%\usepackage[style=ieee, sorting=none, maxnames=10, minnames=10]{biblatex}
-% DOC: https://www.ctan.org/pkg/biblatex-science
-%\usepackage[style=science, maxnames=10, minnames=10]{biblatex}
 \usepackage{csquotes}
-%\usepackage[numbers, sort&compress]{natbib}
-%\usepackage{cite} % recommended in IEEEtran_HOWTO.pdf
-%\def\bibcommenthead{}  % to avoid error in Springer bst
 
 
 %%%%% PhD vs MS %%%%%
@@ -60,7 +47,6 @@
 %Remove \phdtrue if this is a MS thesis
 \newif\ifphd
 \phdtrue
-
 
 %%%%% Nomenclature True %%%%%
 \newif\ifnomenclature
@@ -70,60 +56,30 @@
 
 %%%%% CO-ADVISERS %%%%%
 
-%Remove \onedirectortrue if Co-Directors available
+%Change this to \onedirectorfalse if Co-Directors available
 \newif\ifonedirector
 \onedirectortrue
 % \onedirectorfalse
 
-%%%%% References %%%%%
-
-% \newif\ifapa
-
-% \ifapa
-% {\usepackage[style=apa, sorting=nyt, maxnames=10, minnames=10]{biblatex}}
-% \fi
-
-% \newif\ifieee
-
-% \ifieee
-% {\usepackage[style=ieee, sorting=nyt, maxnames=10, minnames=10]{biblatex}}
-% \fi
-
-% \newif\ifscience
-
-% \ifscience
-% {\usepackage[style=science, sorting=nyt, maxnames=10, minnames=10]{biblatex}}
-% \fi
-
-%%%%% Declaring Options %%%%%
-
-\DeclareOption{diss}{\newif\ifphd \phdtrue}
-\DeclareOption{thesis}{\newif\ifphd }
-% \DeclareOption{apa}{\apatrue}
-% \DeclareOption{ieee}{\ieeetrue}
-% \DeclareOption{science}{\sciencetrue}
-\ProcessOptions\relax
-
-%\usepackage[style=ieee, sorting=nyt, maxnames=10, minnames=10]{biblatex}
-
-% https://www.overleaf.com/learn/latex/Biblatex_bibliography_styles
-% https://ctan.math.washington.edu/tex-archive/macros/latex/contrib/biblatex/doc/biblatex.pdf
-% DOC: https://www.ctan.org/pkg/biblatex-apa
-% specifying ieee vs. apa vs. science
-% \ifapa
-% \usepackage[style=apa, sorting=nyt, maxnames=10, minnames=10]{biblatex}
-
-% \ifieee
-
-
-% \ifscience
-% \usepackage[style=science, sorting=nyt, maxnames=10, minnames=10]{biblatex}
+%%%%%%%%%% %%%%%%%%%% %%%%%%%%%% %%%%%%%%%% %%%%%%%%%% 
+% You do not need to make any alterations to any of the sections 
+%%%%%%%%%% %%%%%%%%%% %%%%%%%%%% %%%%%%%%%% %%%%%%%%%% 
 
 %%%%% MARGINS & SPACES %%%%%
 
-%Margins should be 1.0" on all sides
-% \usepackage[margin=1in]{geometry}
-% \pagestyle{empty}
+%The margin should be consistent around the document: 1 inch
+\usepackage[margin=1in, headsep=0.5in]{geometry}
+%Two double spaces above and below figures 
+\setlength{\intextsep}{1.69cm}
+\setlength{\textfloatsep}{1.69cm}
+\setlength{\floatsep}{1.69cm}
+
+
+%%%%% Declaring Options - MS vs. PhD %%%%%
+
+\DeclareOption{diss}{\newif\ifphd \phdtrue}
+\DeclareOption{thesis}{\newif\ifphd }
+\ProcessOptions\relax
 
 
 %%%%% TITLE PAGE %%%%%
@@ -159,14 +115,9 @@
         \thispagestyle{empty}%
         \centering
                 \def\baselinestretch{2.0}\@normalsize
-                % \doublespacing
                 \vspace*{-25pt}
                 {\bf\uppercase\expandafter{\@title}}\\
-        % \end{center}
-        % \def\baselinestretch{0}\@normalsize
-        % \vspace{24pt}
                 \renewcommand{\baselinestretch}{1.0}\@normalsize
-        % \begin{center}
                 \vspace{0.4cm}
                  by\\
                 \vspace{0.43cm}
@@ -183,7 +134,6 @@
                 \vspace{0.45cm}
                 \uppercase{Old Dominion University}\\
                 \@submitdate\\
-        % \end{center}
         \vspace{1.85cm}
         \hfill\parbox[t]{2.5in}{Approved by:\\
                             \ifonedirector
@@ -198,27 +148,24 @@
 \def\abstract#1{\def\@abstract{#1}}
 
 \def\abstractpage{\pagestyle{empty}%
-        % \begingroup
         \centering{
                 {\bf ABSTRACT}\\
                 \vspace{0.42cm}
-                % \renewcommand{\baselinestretch}{1.0}\@normalsize
                 {\uppercase\expandafter{\@title}}\\
                 \vspace{0.42cm}
                 \@author\\
                 Old Dominion University, \number\the\year\\
+                % Need to be fixed in case of two directors (see bottom of pg. 25 in the guide).
                 % \ifonedirector
-                Director: Dr. \@principaladviser
+                % Director: Dr. \@principaladviser
                 % \else
                 % Co-Directors:\@coadvisers
                 % \fi
+                Director: Dr. \@principaladviser
                 \vspace{1.13cm}
             
         }
-% 		\endgroup
-        % \end{center}
         \justifying
-        % \parskip
         \par
         \def\baselinestretch{2.0}\@normalsize
         \@abstract
@@ -230,29 +177,29 @@
 \def\copyrightyear#1{\gdef\@copyrightyear{#1}} % \author, \title in report
 
 \def\@submitdate{\ifcase\the\month\or
-  January\or February\or March\or April\or May\or June\or
-  July\or August\or September\or October\or November\or December\fi
-  \space \number\the\year}
+January\or February\or March\or April\or May\or June\or
+July\or August\or September\or October\or November\or December\fi
+\space \number\the\year}
 \ifnum\month=12
-    \@tempcnta=\year \advance\@tempcnta by 1
-    \edef\@copyrightyear{\number\the\@tempcnta}
+\@tempcnta=\year \advance\@tempcnta by 1
+\edef\@copyrightyear{\number\the\@tempcnta}
 \else
-    \def\@copyrightyear{\number\the\year}
+\def\@copyrightyear{\number\the\year}
 \fi
 
 \def\copyrightpage{%
 
-        \pagestyle{myheadings}
+\pagestyle{myheadings}
 
-        \begin{center}
+\begin{center}
 
-        \topskip0pt
+\topskip0pt
 
 \vspace*{\fill}
 
-                Copyright, \@copyrightyear, by \@author, All Rights Reserved.
+Copyright, \@copyrightyear, by \@author, All Rights Reserved.
 
-        \end{center}
+\end{center}
 
 \vspace*{\fill}
 
@@ -312,12 +259,8 @@
                  Old Dominion University \\
                  Norfolk, VA 23529
               \end{flushleft}
-            %   \par
               \@vita
               \vfill
-            %   \begin{flushleft}
-            %      Typeset using \LaTeX .
-            %   \end{flushleft}
     
 }
 
@@ -379,7 +322,6 @@
                 \renewcommand{\MyShipoutHook}{}
                  \let\addvspace=\saveaddvspace
                 \let\addvspace=\saveaddvspace}
-                % \addtocontents{toc}{\vspace*{0.42cm}}
                 \cleardoublepage
         \fi
         \def\baselinestretch{1.3}\@normalsize
@@ -387,22 +329,9 @@
         \pagestyle{myheadings}
         \labelchaptersintableofcontents}
 
-
-% \pagestyle{myheadings}
-% \markboth{}{}
-
-% \def\nnfootnote{%
-%      \@ifnextchar [\@xfootnotenext
-%       {\protected@xdef%
-% %       \@thefnmark{\thempfn}%   removed the number from FOOTNOTETEXT command:
-%         \@thefnmark{ }%
-%     \@footnotetext}}
-% %
-
-
 %%%%% Table of Contents Page %%%%%
 
-%Depth of table of contents is only chapter and sections level
+%Depth of table of contents is only chapter and section level
 \setcounter{tocdepth}{1}
 
 \renewcommand\@dotsep{0.5}	% MCW: space between dots (section level)
@@ -411,15 +340,9 @@
 %Align page numbers in toc  
 \renewcommand{\@pnumwidth}{0pt{}}
 
-% \renewcommand{\large}{\fontsize{14}{\baselineskip}}
-
 \def\tableofcontents{\pagestyle{myheadings}\chapter*{Table of Contents}
-% \vspace{0.42cm}
-% If we want same spacing like rest of the document, use below
- % \def\baselinestretch{2.0}\@normalsize
  
  \def\baselinestretch{1.0}\@normalsize
- % {\setlength{\parskip}{12\p@} \@starttoc{toc}}
  \@starttoc{toc}
  \addtocontents{toc}{\hfill Page\par}
  % Comment the below if we want same spacing like rest of the document
@@ -435,9 +358,6 @@
       \parindent \z@ \rightskip \@pnumwidth
       \parfillskip -\@pnumwidth
       \leavevmode 
-      % \bfseries if bold chapter title needed
-       %\advance\leftskip\@tempdima
-       %\hskip -\leftskip
        
     #1\nobreak\dotfill \nobreak\hb@xt@\@pnumwidth{#2}\par 
       \penalty\@highpenalty
@@ -446,20 +366,16 @@
 
 %List of Figures and Tables Setup
 \def\listoffigures{\chapter*{List of Figures}
- %\newline
  
  \def\baselinestretch{1.0}\@normalsize
  {\setlength{\parskip}{12\p@} \@starttoc{lof}}
  \addtocontents{lof}{\noindent Figure\hfill Page\par}
- % \addtocontents{lof}{\protect \vspace{0.42 cm}}
 }
 
 %\@dottedtocline{1} then Distance {before figure number} and {between figure number and title}
 \renewcommand*\l@figure{\@dottedtocline{1}{0mm}{7mm}}
 \renewcommand*\l@table{\@dottedtocline{1}{0mm}{7mm}}
 \renewcommand*\l@chapter{\@dottedtocline{1}{0mm}{7mm}}%Fix for getting chapter titles wrapped
-% \renewcommand{\cftfigaftersnum}{.}
-% \renewcommand{\cfttabaftersnum}{.}
 
 
 \def\listoftables{\chapter*{List of Tables}
@@ -467,17 +383,15 @@
  \def\baselinestretch{1.0}\@normalsize
  {\setlength{\parskip}{12\p@} \@starttoc{lot}}%
  \addtocontents{lot}{\noindent Table\hfill Page\par}
- % \addtocontents{lot}{\protect \vspace{-12pt}}
 }
-
 
 %%%%% Chapter, Section %%%%%
 
-% Start with pagestyle{myheadings} in case front matter isn't processed
+% Start with pagestyle{myheadings} in case the front matter isn't processed
 \pagestyle{myheadings}
 \markboth{}{}
 
-%
+
 % FRW added custom footnote without number for document style phrase
 %
 \def\nnfootnote{%
@@ -504,9 +418,7 @@
                     \else
                       \addcontentsline{toc}{chapter}{\uppercase{#1}}%
                     \fi
-                    %\chaptermark{#1}%
-                    %\addtocontents{lof}{\protect\addvspace{10\p@}}%
-                    %\addtocontents{lot}{\protect\addvspace{10\p@}}%
+
                     \if@twocolumn
                       \@topnewpage[\@makechapterhead{#2}]%
                     \else
@@ -516,21 +428,15 @@
 \def\@makechapterhead#1{%
 %  \vspace*{50\p@}%
   {\parindent \z@ \raggedright \normalfont
-    % \renewcommand{\baselinestretch}{2}
     \ifnum \c@secnumdepth >\m@ne
-%        \centerline{\bfseries \@chapapp\space \thechapter}
-        % \begin{center}
         \centering
         \bfseries \@chapapp \space \thechapter
-        % \end{center}
         \par\nobreak
         \vskip 0.85cm
     \fi
     \interlinepenalty\@M
- %    \centerline{\bfseries \uppercase{#1}}\par\nobreak
     \centering
     \bfseries \uppercase{#1}
-    % \end{center}
     \vskip 0.85cm
   }}
 \def\@schapter#1{\if@twocolumn                   \@topnewpage[\@makeschapterhead{#1}]%
@@ -543,7 +449,6 @@
   {\parindent \z@ \raggedright
     \normalfont
     \interlinepenalty\@M
- %   \centerline{
      \begin{center}
      \bfseries  \uppercase{#1}
      \end{center}
@@ -559,7 +464,7 @@
                          \refstepcounter{section}%
                          \addcontentsline{toc}{section}%
                         {\protect\hspace{0.6cm}\!\numberline{\thesection}\uppercase{#1}}
-                            %\enskip\quad\! to indent the section number and title to fall under "T" in INTRODUCTION in toc
+                            %\hspace{0.6cm} to indent the section number and title to fall under "T" in INTRODUCTION in toc
                     \else
                       \addcontentsline{toc}{section}{\uppercase{#1}}%
                     \fi
@@ -586,9 +491,6 @@
                          \addcontentsline{toc}{subsection}%
                                    {\protect\numberline{\thesubsection}\uppercase{#1}}%
                      \fi
-                    % \chaptermark{#1}%
-                    % \addtocontents{lof}{\protect\addvspace{10\p@}}%
-                    % \addtocontents{lot}{\protect\addvspace{10\p@}}%
                        \@makesubsectionhead{#2}%
                      }
 \def\@makesubsectionhead#1{%
@@ -606,7 +508,6 @@
   }
 
 \newcommand{\achapter}{\if@openright\cleardoublepage\else\clearpage\fi
-                  % \thispagestyle{myheadings}%
                     \global\@topnum\z@
                     \@afterindentfalse
                     \secdef\@achapter\@schapter}
@@ -614,13 +515,10 @@
                          \refstepcounter{chapter}%
                          \typeout{\@chapapp\space\thechapter}%
                          \addcontentsline{toc}{section}%
-                                   {\protect\hspace{0.7cm}\!\numberline{\thechapter.}\uppercase{#1}}%To align the appendix title under "D" in APPENDICES in toc
+                                   {\protect\hspace{0.7cm}\!\numberline{\thechapter.}\uppercase{#1}}%To align the appendix title to fall under "D" in APPENDICES in toc
                     \else
                       \addcontentsline{toc}{section}{\uppercase{#1}}%
                     \fi
-                    %\chaptermark{#1}%
-                    %\addtocontents{lof}{\protect\addvspace{10\p@}}%
-                    %\addtocontents{lot}{\protect\addvspace{10\p@}}%
                     \if@twocolumn
                       \@topnewpage[\@makeachapterhead{#2}]%
                     \else
@@ -651,30 +549,6 @@
 \newif\ifcopyright \newif\iffigurespage \newif\iftablespage
 \copyrighttrue \figurespagetrue \tablespagetrue
 
-
-%%%%% \newcommand \renewcommand definitions %%%%%
-
-% \setlength{\voffset}{-0.5in}
-% \marginparwidth 40pt \marginparsep 10pt
-% \topmargin 0in \headsep .31in
-% \textheight 8.94in \textwidth 6.5in
-% \brokenpenalty=10000
-
-% \oddsidemargin 0.00in
-% \if@twoside
-%   \evensidemargin 0.0in
-% \else
-%   \evensidemargin 0.0in
-% \fi
-
-% \textfloatsep  75pt plus 2pt minus 4pt
-% \floatsep  75pt plus 2pt minus 4pt
-% \intextsep  75pt plus 2pt minus 4pt %%%% added FRW
-
-% \def\textfraction{.4}  %%%%% frw
-% \def\textfraction{.25}
-% \def\floatpagefraction{.5}
-
 %Table of contents second page
 \newcommand{\tocShipoutHook}{~\hfill{Page}\par\vspace{0pt}}
 % \newcommand{\tocShipoutHook}{\noindent{Chapter}~\hfill{Page}\par\vspace{0pt}}
@@ -691,16 +565,10 @@
 \def\thetable{\@arabic\c@table}	
 \def\thechapter{\@arabic\c@chapter}	
 \def\theequation{\arabic{equation}}	
-% \renewcommand{\figurename}{FIG.}	
-% \renewcommand{\tablename}{TABLE}	
-% \renewcommand{\bibname}{BIBLIOGRAPHY}	
-% \renewcommand{\chaptername}{CHAPTER}	
-% \renewcommand{\appendixname}{APPENDIX}
 
 % This needed to be changed to use with babel package
 \addto\captionsenglish{\renewcommand{\chaptername}{CHAPTER}}
 \addto\captionsenglish{\renewcommand{\appendixname}{APPENDIX}}
-
 
 \newcommand{\labelchaptersintableofcontents}{%
      \addtocontents{toc}{\vspace*{0.42cm}} %Gap between list of figures and "chapter" in TOC
@@ -719,6 +587,7 @@
   \gdef\thechapter{\@Alph \c@chapter}
 %   \gdef\thechapter{\hspace{5mm}\@Alph \c@chapter}
   }
+  
 % To wrap the text in the list of figures and the list of tables under the numbering. Credit goes to Keegan Sherman for their help with this fix.  
 \usepackage{titletoc}
 \titlecontents{table}[0mm] % Set up list of tables
@@ -732,66 +601,17 @@
     {\thecontentslabel\quad}
     {}
     {\dotfill\thecontentspage}  
+
     
- %%%% PNAS Style %%%%
- 
- 
-%For PNAS Style Figure Captions
+  
+%For Styling Figure Captions
 \RequirePackage[labelfont={bf},%removed sf
                 labelsep=period,%
                 figurename=Figure,
                 tablename=Table]{caption}
     
 
-%For PNAS Style Table Captions
+%For Styling Table Captions
 \RequirePackage{etoolbox}
-% \captionsetup*[table]{labelfont+={small},textfont+={small,sf,bf},skip=10pt,position=above}
 \captionsetup*[table]{labelfont+={bf},skip=10pt,position=above}
-
-
-% booktabs provide nice spacing, but rule widths and distances need fixing
-% \setlength{\heavyrulewidth}{0.5pt}
-% \setlength{\lightrulewidth}{0.5pt}
-% \setlength{\aboverulesep}{1.5pt}
-% \setlength{\belowrulesep}{1.5pt}
-% \setlength{\belowbottomsep}{10pt}
-% \AtBeginEnvironment{tabular}{
-% \sffamily\fontsize{7.5}{10}\selectfont
-% }
-% \newcommand{\addtabletext}[1]{{\setlength{\leftskip}{9pt}\fontsize{7}{9}\selectfont#1}}
-
-% %% Equation numbering - use square brackets
-
-% \renewcommand\tagform@[1]{\maketag@@@ {[\ignorespaces #1\unskip \@@italiccorr ]}}
-
-
-
-%For PNAS Style Table Captions
-% \RequirePackage[numbers,sort&compress,merge,round]{natbib}
-% \setlength{\bibsep}{0.0pt}
-% \IfFileExists{pnas-new.bst}{
-%   \bibliographystyle{pnas-new}
-% }{
-%   \IfFileExists{pnas2011.bst}{
-%     \bibliographystyle{pnas2011}
-%     \PackageWarning{pnas-new}{pnas-new.bst not found; using pnas2011.bst instead}
-%   }{
-%     \bibliographystyle{unsrtnat}
-%     \PackageWarning{pnas-new}{pnas-new.bst and pnas2011.bst not found; falling back to unsrtnat instead}
-%   }
-% }
-
-% Rename "Bibliography" to "References"
-% \renewcommand\bibname{REFERENCES}
-% \renewcommand\chaptername{CHAPTER}	
-% \renewcommand\appendixname{APPENDIX}
-
-% \renewcommand{\bibsection}{} % Remove header
-% \renewcommand\bibfont{\normalfont\sffamily\fontsize{6}{8}\selectfont} % set font to be sans serif
-%% April 29, 2019: abbreviate journal names
-% \RequirePackage{jabbrv}
- 
-% \renewcommand\@biblabel[1]{ #1.} % Remove brackets from label
-% \def\tagform@#1{\maketag@@@{\bfseries(\ignorespaces#1\unskip\@@italiccorr)}}
-% \renewcommand{\eqref}[1]{\textup{{\normalfont Eq.~(\ref{#1}}\normalfont)}}
 
