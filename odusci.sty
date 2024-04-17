@@ -2,10 +2,14 @@
 %  April 16, 2024
 %  https://github.com/oduwsdl/odusci-etd-template
 
-% This file is to be used as a class named, “odusci”.  The formatting of this class corresponds to "The Old Dominion University Guide for the Preparation of Theses and Dissertation" and Input from the College of Science at ODU. 
+% This file is to be used as a class named, “odusci”.  The formatting of this class
+% corresponds to "The Old Dominion University Guide for the Preparation of Theses and
+% Dissertations" and input from the College of Sciences at ODU. 
 
-% This class is adapted from a package named, "ODUthesis", originally written by Dr. J. W. Van Orden, Professor, Department of Physics and the “wsdlthesis” class file modified by the Web Science and Digital Libraries (WS-DL) Research Group alumni Dr. Sawood Alam, Department of Computer Science to suit their group's needs.
-
+% This class is adapted from a package named, "ODUthesis", originally written by 
+% Dr. J. W. Van Orden, ODU Professor of Physics, and the “wsdlthesis” class 
+% file modified by Dr. Sawood Alam, ODU alumnus of the Department of Computer
+% Science and the Web Science and Digital Libraries (WS-DL) Research Group.
 
 %%%%% Required Packages %%%%%
 
@@ -220,7 +224,8 @@ Copyright, \@copyrightyear, by \@author, All Rights Reserved.
 \def\acknowledge#1{\def\@acknowledge{#1}}
 
 \def\ackpage{\def\baselinestretch{2.0}\@normalsize\pagestyle{myheadings}%
-        \centering {                                 \renewcommand{\baselinestretch}{1.0}\@normalsize
+        \centering {                                 
+        \renewcommand{\baselinestretch}{1.0}\@normalsize
             {\bf ACKNOWLEDGMENTS}
             \vspace{1.13cm}
             
@@ -236,7 +241,8 @@ Copyright, \@copyrightyear, by \@author, All Rights Reserved.
 \def\nomenclature#1{\def\@nomenclature{#1}}
 
 \def\nomenclaturepage{\def\baselinestretch{2.0}\@normalsize\pagestyle{myheadings}%
-        \centering {                                 \renewcommand{\baselinestretch}{1.0}\@normalsize
+        \centering {                                 
+        \renewcommand{\baselinestretch}{1.0}\@normalsize
             {\bf NOMENCLATURE}
             \vspace{1.13cm}
             
@@ -439,7 +445,8 @@ Copyright, \@copyrightyear, by \@author, All Rights Reserved.
     \bfseries \uppercase{#1}
     \vskip 0.85cm
   }}
-\def\@schapter#1{\if@twocolumn                   \@topnewpage[\@makeschapterhead{#1}]%
+\def\@schapter#1{\if@twocolumn                   
+                    \@topnewpage[\@makeschapterhead{#1}]%
                  \else
                    \@makeschapterhead{#1}%
                    \@afterheading
@@ -464,7 +471,7 @@ Copyright, \@copyrightyear, by \@author, All Rights Reserved.
                          \refstepcounter{section}%
                          \addcontentsline{toc}{section}%
                         {\protect\hspace{0.6cm}\!\numberline{\thesection}\uppercase{#1}}
-                            %\hspace{0.6cm} to indent the section number and title to fall under "T" in INTRODUCTION in toc
+    %\hspace{0.6cm} to indent the section number and title to fall under "T" in INTRODUCTION in toc
                     \else
                       \addcontentsline{toc}{section}{\uppercase{#1}}%
                     \fi
@@ -515,7 +522,8 @@ Copyright, \@copyrightyear, by \@author, All Rights Reserved.
                          \refstepcounter{chapter}%
                          \typeout{\@chapapp\space\thechapter}%
                          \addcontentsline{toc}{section}%
-                                   {\protect\hspace{0.7cm}\!\numberline{\thechapter.}\uppercase{#1}}%To align the appendix title to fall under "D" in APPENDICES in toc
+                                   {\protect\hspace{0.7cm}\!\numberline{\thechapter.}\uppercase{#1}}
+                            % To align the appendix title to fall under "D" in APPENDICES in toc
                     \else
                       \addcontentsline{toc}{section}{\uppercase{#1}}%
                     \fi
@@ -588,7 +596,8 @@ Copyright, \@copyrightyear, by \@author, All Rights Reserved.
 %   \gdef\thechapter{\hspace{5mm}\@Alph \c@chapter}
   }
   
-% To wrap the text in the list of figures and the list of tables under the numbering. Credit goes to Keegan Sherman for their help with this fix.  
+% To wrap the text in the list of figures and the list of tables under the numbering. 
+% Credit goes to PhD student Keegan Sherman for help with this fix.  
 \usepackage{titletoc}
 \titlecontents{table}[0mm] % Set up list of tables
     {}
