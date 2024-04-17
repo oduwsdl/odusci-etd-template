@@ -103,22 +103,23 @@ Most of the customization you need to make is isolated to `main.tex`. Do not edi
   \member{Member Name}
   ```
      
-  * In **\[odusci.sty]**  
-  Comment out `\onedirectortrue` and uncomment `\onedirectorfalse`
+  * In **\[odusci.sty]**, comment out `\onedirectortrue` ([line 65](https://github.com/oduwsdl/odusci-etd-template/blob/main/odusci.sty#L65)) and uncomment `\onedirectorfalse` ([line 66](https://github.com/oduwsdl/odusci-etd-template/blob/main/odusci.sty#L66))
    
 #### Abstract 
-- Please insert your abstract here, ensuring it does not exceed a maximum of 350 words.
+- Insert your abstract starting on [line 76](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L76), ensuring it does not exceed a maximum of 350 words.
 - The upper sections of the page, including the title, author, university, and director information, will be automatically generated based on the input provided on the title page. You do not need to make any modifications to the template regarding this section.
   
 #### Copyrights
 - This page will be automatically generated based on the input of the author's name on the title page. You do not need to make any modifications to the template regarding this section.
      
 #### Dedication 
-- Please include your dedication here. Ensure that it does not exceed one page in length.
+- Include your dedication starting on [line 79](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L79). Ensure that it does not exceed one page in length.
 - This section is used to recognize those who have supported you during your graduate studies.
      
 #### Acknowledgments 
-- This section is different from the dedication page. Recognition of individuals who contributed to your academic research should be provided here.
+- Include your acknowledgements starting on [line 82](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L82)
+- This section is for recognition of individuals who contributed to your academic research should be provided here.
+- Note that if you want multiple paragraphs, you must explicitly add newline and indent commands: `\\ \indent`
      
 #### Table of Contents, List of Tables, and List of Figures
 - These sections will be automatically generated based on the content of your document. You do not need to make any modifications to the template regarding these sections. LaTeX will handle the generation of the table of contents, list of tables, and list of figures for you.
@@ -128,28 +129,26 @@ Most of the customization you need to make is isolated to `main.tex`. Do not edi
 
 - In **\[main.tex]**
 
-  The nomenclature page provides a comprehensive list of symbols and abbreviations used throughout the document, along with their corresponding definitions or explanations. Add your nomenclature in the provided format in the template. The inclusion of a nomenclature page is optional.
+  The nomenclature page provides a comprehensive list of symbols and abbreviations used throughout the document, along with their corresponding definitions or explanations. Add your nomenclature in the provided format in the template ([lines 88-95](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L88-L95)). The inclusion of a nomenclature page is optional.
 
-- In **\[odusci.sty]**  
-  Comment out `\nomenclaturefalse` and uncomment `\nomenclaturetrue`
+- In **\[odusci.sty]**, comment out `\nomenclaturefalse` ([line 58](https://github.com/oduwsdl/odusci-etd-template/blob/main/odusci.sty#L58)) and uncomment `\nomenclaturetrue` ([line 59](https://github.com/oduwsdl/odusci-etd-template/blob/main/odusci.sty#L59))
 
 ### Chapters and Sections
 
 - It is recommended to put the contents of each chapter in a separate .tex file in the "Chapters" folder.
-
+- Then use the `\input` command to insert the chapters into your main file, as shown in [lines 107-114](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L107-L114)
 - Start a new chapter with `\chapter{Chapter Title}`
-
 - Sections and subsections can be created as normal with `\section{Section Title}` and `\subsection{Section Title}`.
 
 ### Figures and Tables
 
 - Figures, tables, and equations can be added as normal. There are several examples of these throughout the example document:
 
-  - figure - [01_introduction.tex](https://github.com/oduwsdl/odusci-etd-template/blob/62a6f1c63d76d7375941a522554ab5e2e9159af2/Chapters/01_introduction.tex#L10)
-  - subfigure - [02_background.tex](https://github.com/oduwsdl/odusci-etd-template/blob/62a6f1c63d76d7375941a522554ab5e2e9159af2/Chapters/02_background.tex#L23)
-  - landscape figure - [02_background.tex](https://github.com/oduwsdl/odusci-etd-template/blob/62a6f1c63d76d7375941a522554ab5e2e9159af2/Chapters/02_background.tex#L49)
-  - equation - [02_background.tex](https://github.com/oduwsdl/odusci-etd-template/blob/62a6f1c63d76d7375941a522554ab5e2e9159af2/Chapters/02_background.tex#L42)
-  - table - [03_relatedwork.tex](https://github.com/oduwsdl/odusci-etd-template/blob/62a6f1c63d76d7375941a522554ab5e2e9159af2/Chapters/03_relatedwork.tex#L17)
+  - figure - [01_introduction.tex](https://github.com/oduwsdl/odusci-etd-template/blob/main/Chapters/01_introduction.tex#L10)
+  - subfigure - [02_background.tex](https://github.com/oduwsdl/odusci-etd-template/blob/main/Chapters/02_background.tex#L23)
+  - landscape figure - [02_background.tex](https://github.com/oduwsdl/odusci-etd-template/blob/main/Chapters/02_background.tex#L45)
+  - equation - [02_background.tex](https://github.com/oduwsdl/odusci-etd-template/blob/main/Chapters/02_background.tex#L39)
+  - table - [03_relatedwork.tex](https://github.com/oduwsdl/odusci-etd-template/blob/main/Chapters/03_relatedwork.tex#L17)
 
 ### Appendix
 
