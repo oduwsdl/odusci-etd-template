@@ -43,7 +43,7 @@ Most of the customization you need to make is isolated to `main.tex`. Do not edi
 ### `odusci` Package options
 
 - The default setting of the `odusci` package is for PhD dissertations  
-  [`\usepackage{odusci}`](https://github.com/oduwsdl/odusci-etd-template/blob/62a6f1c63d76d7375941a522554ab5e2e9159af2/main.tex#L8)
+  [`\usepackage{odusci}`](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L12)
 
 - For a Master's thesis, you can use the `thesis` option  
   `\usepackage[thesis]{odusci}`
@@ -57,7 +57,7 @@ Most of the customization you need to make is isolated to `main.tex`. Do not edi
 
 - Ensure that your bibliography file, [ref.bib](ref.bib), contains all the necessary references for your document.
 
-- If you want to use a different filename for your references, you must change the file referenced in [`\addbibresource{ref.bib}`](https://github.com/oduwsdl/odusci-etd-template/blob/62a6f1c63d76d7375941a522554ab5e2e9159af2/main.tex#L29) in `main.tex`.     
+- If you want to use a different filename for your references, you must change the file referenced in [`\addbibresource{ref.bib}`](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L27) in `main.tex`.     
 
 #### Reference Citation Style
    
@@ -70,15 +70,15 @@ Most of the customization you need to make is isolated to `main.tex`. Do not edi
 
 - Select the appropriate bibliography style for your field by uncommenting one of the following lines in `main.tex`:
 
-    [`% \usepackage[style=ieee, sorting=nyt, maxnames=10, minnames=10]{biblatex}`](https://github.com/oduwsdl/odusci-etd-template/blob/62a6f1c63d76d7375941a522554ab5e2e9159af2/main.tex#L18)  
-    [`% \usepackage[style=apa, sorting=nyt, maxnames=10, minnames=10]{biblatex}`](https://github.com/oduwsdl/odusci-etd-template/blob/62a6f1c63d76d7375941a522554ab5e2e9159af2/main.tex#L20)  
-    [`% \usepackage[style=science, sorting=nyt, maxnames=10, minnames=10]{biblatex}`](https://github.com/oduwsdl/odusci-etd-template/blob/62a6f1c63d76d7375941a522554ab5e2e9159af2/main.tex#L22)
+    [`% \usepackage[style=ieee, sorting=nyt, maxnames=10, minnames=10]{biblatex}`](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L20)  
+    [`% \usepackage[style=apa, sorting=nyt, maxnames=10, minnames=10]{biblatex}`](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L22)  
+    [`% \usepackage[style=science, sorting=nyt, maxnames=10, minnames=10]{biblatex}`](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L24)
 
 ### Front Matter
 
 #### Title Page
 
-- Add the title, author name, prior degrees, department, submit date, and committee.
+- Add the title, author name, prior degrees, department, submit date, and committee, starting on [line 33](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L33) in `main.tex`
    
 - If the prior degrees are outside of the US, use the following format. (University and country must be on the same line.)
   ```
@@ -94,7 +94,7 @@ Most of the customization you need to make is isolated to `main.tex`. Do not edi
   ```
 
 - If you have co-advisers, you must make adjustments in both `main.tex` and `odusci.sty`
-  * In **\[main.tex]**
+  * In **\[main.tex]**, comment out [lines 59-62](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L59-L62) and uncomment [lines 65-69](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L65-L69):
   ```
   \coadvisers{Director Name}
   \coadvisers{Director Name}
