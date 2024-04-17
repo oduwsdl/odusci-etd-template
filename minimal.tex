@@ -1,75 +1,97 @@
-%The font size of the dissertation should be consistent around the document: 12 pt
+%%  By Himarsha R. Jayanetti and Dr. Michele C. Weigle
+%%  April 16, 2024
+
+%% The font size of the dissertation should be consistent at 12 pt
 \documentclass[12pt]{report}
 
-%Default package for PhD Dissertations
-\usepackage{odusci} 
+%%%%% Thesis or Dissertation Selection %%%%% 
+%% For MS thesis, comment out the \usepackage{odusci} line (line 13) and 
+%% uncomment the \usepackage[thesis]{odusci} line (line 17)
 
-%%% Citation styles - uncomment the appropriate line %%%
-% IEEE
+%% The default is for PhD dissertations
+\usepackage{odusci}
+%\usepackage[diss]{odusci}  % alternate PhD package specification
+%% Uncomment this line for MS thesis
+%\usepackage[thesis]{odusci}  
+
+%%%%% Citation Style %%%%% 
+%% Uncomment the appropriate line for your discipline
+%% IEEE
 \usepackage[style=ieee, sorting=nyt, maxnames=10, minnames=10]{biblatex}
-% APA
+%% APA
 % \usepackage[style=apa, sorting=nyt, maxnames=10, minnames=10]{biblatex}
-% Science 
+%% Science 
 % \usepackage[style=science, sorting=nyt, maxnames=10, minnames=10]{biblatex}
 
-% add bibtex file
+%% add BibTeX file
 \addbibresource{ref.bib}
 
-%Sub-figures
-\usepackage{floatrow}
-\floatsetup[table]{capposition=top}
-\usepackage[label font=bf,labelformat=simple]{subfig}
-\usepackage{caption}
-
-\floatsetup[figure]{style=plain,subcapbesideposition=top}
-%For sub-figures labeled as A, B, C, ...
-\renewcommand{\thesubfigure}{\Alph{subfigure}}
-
-% All Other Packages Used
-\usepackage{graphicx}
-\usepackage{rotating} %For rotating large figure and caption lengthwise (landscape position)
-\usepackage{indentfirst}
-\usepackage{afterpage}
-\usepackage{ragged2e}
-\usepackage{fancyhdr}
-\usepackage{changepage}
-\usepackage{enumitem}
-
-\setlength\intextsep{1.69cm}               
+%% ***DO NOT CHANGE OR COMMENT THE NEXT LINE*** 
+\setlength\intextsep{1.69cm} % to set space above/below the floats and text 
 \begin{document}
 
+%%%%% TITLE PAGE %%%%% 
 \title{THE TITLE OF THE DISSERTATION. PLEASE REPLACE THE TEXT HERE WITH YOUR TITLE}
 
 \author{Jane Ann Doe}
 
-%US degree
+%% US degree
 \degrees{B.S. July 2017, Stanford University \\
          M.S. July 2020, Stanford University}
-\dept{Computer Science}
-\submitdate{May 2022}
 
+%% Use the following format if the prior degrees are outside of the US. 
+%% University and Country must be all in a single line.
+% \degrees{B.S. July 2017, University of Oxford, United Kingdom. \\
+%          M.S. July 2020, University of Oxford,  United Kingdom.}
+
+%% Department
+\dept{Computer Science}
+
+%% Generates Copyright page, do not uncomment for thesis or dissertation
+%\copyrightfalse
+
+%% submit date must use either "May", "August", or "December" for the month
+\submitdate{May 2024}
+% \submitdate{August 2024}
+% \submitdate{December 2024}
+
+%% Default is for a single adviser
 \principaladviser{Director Name}
 \member{Member Name}
 \member{Member Name}
 \member{Member Name}
 
+%%%%% FRONT MATTER %%%%% 
+
+%% Abstract - maximum 350 words
 \abstract{Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non molestie odio. Pellentesque volutpat, sem a viverra dictum, leo est scelerisque risus, ut convallis dui nulla a lacus. Proin mi magna, pharetra non ante sit amet, euismod lobortis odio. Donec gravida eu elit quis sagittis. Duis consequat, elit in fermentum rutrum, tellus dolor sodales ante, ac aliquam libero purus eu nisi. In aliquam nibh maximus varius blandit. Sed consequat libero faucibus vehicula gravida. Suspendisse vitae nisi ex. Quisque gravida risus ac dapibus blandit. Vestibulum mollis sollicitudin justo. Donec vel ipsum non ligula efficitur consequat. Morbi vulputate feugiat diam, rhoncus vehicula eros posuere vitae. Pellentesque sed egestas metus. Vestibulum libero elit, euismod quis vestibulum nec, vulputate at risus. In accumsan sem eu porta ultrices. Quisque sagittis massa felis, eget varius metus semper id. Vivamus tincidunt ipsum sem, sit amet eleifend diam tempor nec. Vivamus elementum, diam id lobortis mattis, nisi lacus.} 
 
+%% Dedication - optional, 1 page max
 \dedication{I dedicate my dissertation ... Morbi vulputate feugiat diam, rhoncus vehicula eros posuere vitae. Pellentesque sed egestas metus.}
 
-\acknowledge{I would like to thank...Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non molestie odio. Pellentesque volutpat, sem a viverra dictum, leo est scelerisque risus, ut convallis dui nulla a lacus. Proin mi magna, pharetra non ante sit amet, euismod lobortis odio. Donec gravida eu elit quis sagittis. Duis consequat, elit in fermentum rutrum, tellus dolor sodales ante, ac aliquam libero purus eu nisi. In aliquam nibh maximus varius blandit. Sed consequat libero faucibus vehicula gravida. Suspendisse vitae nisi ex. Quisque gravida risus ac dapibus blandit. Vestibulum mollis sollicitudin justo. Donec vel ipsum non ligula efficitur consequat.}
+%% Acknowledgements
+\acknowledge{I would like to thank...Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non molestie odio. Pellentesque volutpat, sem a viverra dictum, leo est scelerisque risus, ut convallis dui nulla a lacus. Proin mi magna, pharetra non ante sit amet, euismod lobortis odio. Donec gravida eu elit quis sagittis. Duis consequat, elit in fermentum rutrum, tellus dolor sodales ante, ac aliquam libero purus eu nisi. In aliquam nibh maximus varius blandit. Sed consequat libero faucibus vehicula gravida. Suspendisse vitae nisi ex. Quisque gravida risus ac dapibus blandit. Vestibulum mollis sollicitudin justo. Donec vel ipsum non ligula efficitur consequat. 
+%% If you want multiple paragraphs, must add a newline and indent as below
+\\ \indent 
+Morbi vulputate feugiat diam, rhoncus vehicula eros posuere vitae. Pellentesque sed egestas metus. Vestibulum libero elit, euismod quis vestibulum nec, vulputate at risus. In accumsan sem eu porta ultrices. Quisque sagittis massa felis, eget varius metus semper id. Vivamus tincidunt ipsum sem, sit amet eleifend diam tempor nec. Vivamus elementum, diam id lobortis mattis, nisi lacus.}
 
-\beforepreface
-\afterpreface
+%%%%% Before and After Acknowledgement Page %%%%%
+%% ***DO NOT CHANGE OR COMMENT THE NEXT TWO LINES*** 
+    \beforepreface
+    \afterpreface
 
+%%%%% CHAPTERS %%%%% 
+%% It is recommended to put the contents of each chapter in a 
+%% separate .tex file in the "Chapters" folder and include them as below.  
 \input{Chapters/minimal_chapter.tex}
 
 \cleardoublepage
 
-\addtocontents{toc}{\vspace*{12pt}}
+%%%%% REFERENCES %%%%% 
+\addtocontents{toc}{\vspace*{12pt}} % gap between last chapter and references in the table of contents
 \printbibliography[heading=bibintoc, title={REFERENCES}]
 
-
-\include{Chapters/minimal_vita}
+%%%%% VITA - max 1 page %%%%% 
+\include{Chapters/99_vita}
 
 \end{document}
