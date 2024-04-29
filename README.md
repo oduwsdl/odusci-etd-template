@@ -74,6 +74,8 @@ Most of the customization you need to make is isolated to `main.tex`. Do not edi
     [`% \usepackage[style=apa, sorting=nyt, maxnames=10, minnames=10]{biblatex}`](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L22)  
     [`% \usepackage[style=science, sorting=nyt, maxnames=10, minnames=10]{biblatex}`](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L24)
 
+- If you want your references to be listed in the order they are cited in your text rather than alphabetically by first author's last name, change `sorting=nyt` to `sorting=none` in the `biblatex` options line.
+
 ### Front Matter
 
 #### Title Page
