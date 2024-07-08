@@ -61,7 +61,9 @@ Most of the customization you need to make is isolated to `main.tex`. Do not edi
 
 #### Reference Citation Style
    
-- The style file uses the `biblatex` Package for formatting references. See ["Bibliography management with biblatex"](https://www.overleaf.com/learn/latex/Bibliography_management_with_biblatex) for more information.
+- The style file uses the `biblatex` Package for formatting references. See ["Bibliography management with biblatex"](https://www.overleaf.com/learn/latex/Bibliography_management_with_biblatex) for more information. Here are a few other references for biblatex:
+    - [The biblatex Package](https://mirrors.rit.edu/CTAN/macros/latex/contrib/biblatex/doc/biblatex.pdf) - in particular, see "3.9 Citation Commands" (pg 110)
+    - [A very quick introduction to managing citations in LaTeX](https://andreasmhallberg.github.io/managing-citations-in-latex/)
 
 - The College of Sciences is allowing 3 different options for bibliography styles (see ["Biblatex bibliography styles"](https://www.overleaf.com/learn/latex/Biblatex_bibliography_styles) for examples of each of these):
     - IEEE - commonly used by Computer Science, Physics, Math
