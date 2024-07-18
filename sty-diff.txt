@@ -13,7 +13,7 @@
   \copyrighttrue \figurespagetrue \tablespagetrue
   
   %Table of contents second page
-! \newcommand{\tocShipoutHook}{~\hfill{Page}\par\vspace{0.42cm}} % MCW: Jul 2024
+! \newcommand{\tocShipoutHook}{~\hfill{Page}\par\vspace{0.42cm}} % MCW July 2024
   % \newcommand{\tocShipoutHook}{\noindent{Chapter}~\hfill{Page}\par\vspace{0pt}}
   
   %Table of figures second page
