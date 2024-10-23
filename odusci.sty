@@ -624,3 +624,21 @@ Copyright, \@copyrightyear, by \@author, All Rights Reserved.
 \RequirePackage{etoolbox}
 \captionsetup*[table]{labelfont+={bf},skip=10pt,position=above}
 
+
+% omit the `toc' argument of 
+% \usepackage[toc, page]{appendix} and use the 
+% \appendix command defined above to 
+% format the TOC correctly
+
+% this environment enables you to \include 
+% appendices inside the environment without messing up toc
+\usepackage[page]{appendix} 
+\newenvironment{Appendices}
+  {
+    \appendix
+    \begin{appendices}
+  }
+  {
+    \end{appendices}
+  }
+
