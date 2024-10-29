@@ -156,6 +156,19 @@ Most of the customization you need to make is isolated to `main.tex`. Do not edi
   - landscape figure - [02_background.tex](https://github.com/oduwsdl/odusci-etd-template/blob/main/Chapters/02_background.tex#L45)
   - equation - [02_background.tex](https://github.com/oduwsdl/odusci-etd-template/blob/main/Chapters/02_background.tex#L39)
   - table - [03_relatedwork.tex](https://github.com/oduwsdl/odusci-etd-template/blob/main/Chapters/03_relatedwork.tex#L17)
+ 
+- To achieve an optimal fit for figures and tables in your LaTeX document, you can adjust their width using percentages of either `\linewidth` (or `\textwidth`)
+
+  ``` \begin{figure}[tbh]
+  \centering
+  % Adjust the width here by setting a percentage of \linewidth
+  \includegraphics[width=0.5\linewidth]{Figures/cos1.jpeg}
+  \caption[The figure title goes here.]{The figure title goes here.}
+  \label{fig:cos1}
+  \end{figure} 
+  ```
+  
+  In this example, `width=0.5\linewidth` scales the image to 50% of the current text width (`\linewidth`). You can change 0.5 to any decimal to adjust the image size relative to the line width (e.g., `0.3\linewidth` for 30% or `0.8\linewidth` for 80%). 
 
 ### Appendix
 
