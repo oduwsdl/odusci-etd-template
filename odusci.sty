@@ -39,6 +39,23 @@
 \Addlcwords{all of the and a an is before on for but with in as the etc to if}
 \usepackage[T1]{fontenc}
 \usepackage{mathptmx}
+\usepackage{listings} % For code listings
+% Default appearance of code listings (can update in main.tex)
+\lstset{
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  frame=single,
+  breaklines=true,
+  moredelim=[is][\color{red}]{@}{@},
+  escapechar=\%
+}
+\usepackage{xcolor}
+
+
+\usepackage{url}      % For URL formatting
+%This will format the URL in a typewriter font and enable line-breaking if the URL is too long to fit on one line.
+
+\usepackage[]{appendix} %this environment enables you to include appendices inside the environment without messing up TOC
 
 %%%%%  References (using biblatex) %%%%% 
 \usepackage[utf8]{inputenc}
@@ -364,9 +381,9 @@ Copyright, \@copyrightyear, by \@author, All Rights Reserved.
       \parindent \z@ \rightskip \@pnumwidth
       \parfillskip -\@pnumwidth
       \leavevmode 
-       
-    #1\nobreak\dotfill \nobreak\hb@xt@\@pnumwidth{#2}\par 
-      \penalty\@highpenalty
+      
+       #1\nobreak\dotfill \nobreak\hb@xt@\@pnumwidth{#2}\par 
+        \penalty\@highpenalty
     \endgroup
   \fi}
 
@@ -558,7 +575,7 @@ Copyright, \@copyrightyear, by \@author, All Rights Reserved.
 \copyrighttrue \figurespagetrue \tablespagetrue
 
 %Table of contents second page
-\newcommand{\tocShipoutHook}{~\hfill{Page}\par\vspace{0pt}}
+\newcommand{\tocShipoutHook}{~\hfill{Page}\par\vspace{0.42cm}} % MCW July 2024
 % \newcommand{\tocShipoutHook}{\noindent{Chapter}~\hfill{Page}\par\vspace{0pt}}
 
 %Table of figures second page
@@ -595,44 +612,20 @@ Copyright, \@copyrightyear, by \@author, All Rights Reserved.
   \gdef\thechapter{\@Alph \c@chapter}
 %   \gdef\thechapter{\hspace{5mm}\@Alph \c@chapter}
   }
-  
-% To wrap the text in the list of figures and the list of tables under the numbering. 
-% Credit goes to PhD student Keegan Sherman for help with this fix.  
-\usepackage{titletoc}
-\titlecontents{table}[0mm] % Set up list of tables
-    {}
-    {\thecontentslabel\quad}
-    {}
-    {\dotfill\thecontentspage}
-    
-\titlecontents{figure}[0mm] % Set up list of figures
-    {}
-    {\thecontentslabel\quad}
-    {}
-    {\dotfill\thecontentspage}  
 
-    
-  
 %For Styling Figure Captions
 \RequirePackage[labelfont={bf},%removed sf
                 labelsep=period,%
                 figurename=Figure,
-                tablename=Table]{caption}
-    
+                tablename=Table]{caption}    
+
 
 %For Styling Table Captions
 \RequirePackage{etoolbox}
 \captionsetup*[table]{labelfont+={bf},skip=10pt,position=above}
 
-
-% omit the `toc' argument of 
-% \usepackage[toc, page]{appendix} and use the 
-% \appendix command defined above to 
-% format the TOC correctly
-
 % this environment enables you to \include 
 % appendices inside the environment without messing up toc
-\usepackage[page]{appendix} 
 \newenvironment{Appendices}
   {
     \appendix
@@ -641,4 +634,3 @@ Copyright, \@copyrightyear, by \@author, All Rights Reserved.
   {
     \end{appendices}
   }
-
