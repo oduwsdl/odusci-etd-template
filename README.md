@@ -203,6 +203,17 @@ To add URLs to your document, you can use the `\url` command provided by the `ur
 ```
 For more information, visit \url{https://github.com/oduwsdl/odusci-etd-template/blob/main/README.md}
 ```
+### Adding Equations
+
+To include equations in your LaTeX document, you can use the `equation` environment for numbered equations and the `\ref` command to reference them later in the text.
+
+```
+Equation \ref{eq:1} exemplifies a standard power series, demonstrating how to include equations in your document.
+
+\begin{equation} \label{eq:1}
+\sum_{i=0}^{\infty} a_i x^i
+\end{equation}
+```
 
 ### Appendix
 
