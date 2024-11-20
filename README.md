@@ -196,7 +196,13 @@ In **[main.tex]**, you can customize the formatting of the code listings on `\ls
   escapechar=\%                % Define '%' as an escape character for special formatting
 }
 ```
+### Adding URLs
 
+To add URLs to your document, you can use the `\url` command provided by the `url` package in LaTeX. This command formats the URL in a typewriter font and enables line-breaking for long URLs that do not fit on a single line.
+
+```
+For more information, visit \url{https://github.com/oduwsdl/odusci-etd-template/blob/main/README.md}
+```
 
 ### Appendix
 
