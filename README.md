@@ -148,11 +148,11 @@ Most of the customization you need to make is isolated to `main.tex`. Do not edi
 - Sections and subsections can be created as normal with `\section{Section Title}` and `\subsection{Section Title}`.
 
 > [!IMPORTANT]
-> **Known Issue**: Long Chapter and Section Titles in Table of Contents (TOC)  
-> When chapter or section titles are too long to fit on a single line in the TOC, the wrapping behavior may differ:
-> - Chapters: Wrapped lines align directly under the chapter number.
-> - Sections: Wrapped lines align under the title text instead of the section number.
-> **Current Workaround**
+> **Known Issue**: When chapter or section titles are too long to fit on a single line in the TOC, the wrapping behavior may differ:
+> - Chapters: Wrapped lines align directly under the title text.
+> - Sections: Wrapped lines align after the section number.
+>   
+> **Current Workaround**:
 >  1. Use **shorter chapter and section titles** that fit on a single line.
 >  2. Alternatively, define a **short title specifically for the TOC** using the `\chapter[Short Title for TOC]{This is the Full Chapter Title Used in the Document}` or `\section[Short Section Title for TOC]{This is the Full Section Title Used in the Document}` syntax.
 
