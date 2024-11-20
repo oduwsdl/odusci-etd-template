@@ -217,7 +217,18 @@ Equation \ref{eq:1} exemplifies a standard power series, demonstrating how to in
 
 ### Appendix
 
-- [`Chapters/98_appendices.tex`](https://github.com/oduwsdl/odusci-etd-template/blob/main/Chapters/98_appendices.tex) contains an example of specifying the appendices. The file starts with the keyword `\appendix` and each new appendix should begin with the line `\achapter{Title of Appendix}`.
+- [`Chapters/98_appendices.tex`](https://github.com/oduwsdl/odusci-etd-template/blob/main/Chapters/98_appendices.tex) contains an example of specifying the appendices.Each new appendix should begin with the line `\achapter{Title of Appendix}`.
+
+- If your appendices are too long or require significant management, you can split them across multiple `.tex` files and then include them in **[main.tex]**.
+
+```
+\begin{Appendices}
+\include{Chapters/98_appendices}           % First appendix file
+\include{Chapters/98_appendices2}          % Second appendix file
+% You can add more .tex files as needed
+\end{Appendices}
+```
+
 
 ### Vita
 
