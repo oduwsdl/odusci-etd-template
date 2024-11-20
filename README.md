@@ -1,8 +1,11 @@
 # ODU College of Sciences LaTeX ETD Template
 
+> [!IMPORTANT]
+> **JULY 18, 2024 UPDATE:** See the Overleaf version of `odusci.sty` for the most up-to-date version (see [diff](sty-diff.txt)).
+
 Welcome to the LaTeX Electronic Thesis and Dissertation (ETD) template for the College of Sciences at Old Dominion University. This template is designed to assist students in formatting their theses and dissertations according to the guidelines provided by the university. Those using this template must still abide by the guidelines and formatting requirements found in the [ODU Guide for Preparation of Theses and Dissertations](https://www.odu.edu/graduateschool/thesis-dissertation-preparation-submission) ([PDF](https://www.odu.edu/sites/default/files/2024/documents/thesis-dissertation-guide-03-2024.pdf), last updated March 2024).
 
-Note that using this template removes the requirement that you submit a "journal model" with your thesis or dissertation, as noted on the College of Sciences [Check-in Sheet](https://www.odu.edu/sites/default/files/documents/check-in.pdf). You just need to check the box on the form that you have used the LaTex template.
+Note that using this template removes the requirement that you submit a "journal model" with your thesis or dissertation, as noted on the College of Sciences [Check-in Sheet](https://www.odu.edu/sites/default/files/documents/check-in.pdf). You just need to check the box on the form that you have used the LaTeX template.
 
 ## Before You Begin
 
@@ -61,7 +64,9 @@ Most of the customization you need to make is isolated to `main.tex`. Do not edi
 
 #### Reference Citation Style
    
-- The style file uses the `biblatex` Package for formatting references. See ["Bibliography management with biblatex"](https://www.overleaf.com/learn/latex/Bibliography_management_with_biblatex) for more information.
+- The style file uses the `biblatex` Package for formatting references. See ["Bibliography management with biblatex"](https://www.overleaf.com/learn/latex/Bibliography_management_with_biblatex) for more information. Here are a few other references for biblatex:
+    - [The biblatex Package](https://mirrors.rit.edu/CTAN/macros/latex/contrib/biblatex/doc/biblatex.pdf) - in particular, see "3.9 Citation Commands" (pg 110)
+    - [A very quick introduction to managing citations in LaTeX](https://andreasmhallberg.github.io/managing-citations-in-latex/)
 
 - The College of Sciences is allowing 3 different options for bibliography styles (see ["Biblatex bibliography styles"](https://www.overleaf.com/learn/latex/Biblatex_bibliography_styles) for examples of each of these):
     - IEEE - commonly used by Computer Science, Physics, Math
@@ -73,6 +78,8 @@ Most of the customization you need to make is isolated to `main.tex`. Do not edi
     [`% \usepackage[style=ieee, sorting=nyt, maxnames=10, minnames=10]{biblatex}`](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L20)  
     [`% \usepackage[style=apa, sorting=nyt, maxnames=10, minnames=10]{biblatex}`](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L22)  
     [`% \usepackage[style=science, sorting=nyt, maxnames=10, minnames=10]{biblatex}`](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L24)
+
+- If you want your references to be listed in the order they are cited in your text rather than alphabetically by first author's last name, change `sorting=nyt` to `sorting=none` in the `biblatex` options line.
 
 ### Front Matter
 
