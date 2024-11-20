@@ -45,9 +45,6 @@ Most of the customization you need to make is isolated to `main.tex`. Do not edi
 
 ### `odusci` Package options
 
-- The default setting of the `odusci` package is for PhD dissertations  
-  [`\usepackage{odusci}`](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L12)
-
 - For a Master's thesis, you can use the `thesis` option  
   `\usepackage[thesis]{odusci}`
 
@@ -101,7 +98,7 @@ Most of the customization you need to make is isolated to `main.tex`. Do not edi
   ```
 
 - If you have co-advisers, you must make adjustments in both `main.tex` and `odusci.sty`
-  * In **\[main.tex]**, comment out [lines 59-62](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L59-L62) and uncomment [lines 65-69](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L65-L69):
+  * In `main.tex`, comment out [lines 59-62](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L59-L62) and uncomment [lines 65-69](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L65-L69):
   ```
   \coadvisers{Director Name}
   \coadvisers{Director Name}
@@ -110,7 +107,7 @@ Most of the customization you need to make is isolated to `main.tex`. Do not edi
   \member{Member Name}
   ```
      
-  * In **\[odusci.sty]**, comment out `\onedirectortrue` ([line 65](https://github.com/oduwsdl/odusci-etd-template/blob/main/odusci.sty#L65)) and uncomment `\onedirectorfalse` ([line 66](https://github.com/oduwsdl/odusci-etd-template/blob/main/odusci.sty#L66))
+  * In `odusci.sty`, comment out `\onedirectortrue` ([line 65](https://github.com/oduwsdl/odusci-etd-template/blob/main/odusci.sty#L65)) and uncomment `\onedirectorfalse` ([line 66](https://github.com/oduwsdl/odusci-etd-template/blob/main/odusci.sty#L66))
    
 #### Abstract 
 - Insert your abstract starting on [line 76](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L76), ensuring it does not exceed a maximum of 350 words.
@@ -134,11 +131,11 @@ Most of the customization you need to make is isolated to `main.tex`. Do not edi
 #### Nomenclature
   If you need to add a Nomenclature list, you must made adjustments in both `main.tex` and `odusci.sty`
 
-- In **\[main.tex]**
+- In `main.tex`
 
   The nomenclature page provides a comprehensive list of symbols and abbreviations used throughout the document, along with their corresponding definitions or explanations. Add your nomenclature in the provided format in the template ([lines 88-95](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L88-L95)). The inclusion of a nomenclature page is optional.
 
-- In **\[odusci.sty]**, comment out `\nomenclaturefalse` ([line 58](https://github.com/oduwsdl/odusci-etd-template/blob/main/odusci.sty#L58)) and uncomment `\nomenclaturetrue` ([line 59](https://github.com/oduwsdl/odusci-etd-template/blob/main/odusci.sty#L59))
+- In `odusci.sty`, comment out `\nomenclaturefalse` ([line 58](https://github.com/oduwsdl/odusci-etd-template/blob/main/odusci.sty#L58)) and uncomment `\nomenclaturetrue` ([line 59](https://github.com/oduwsdl/odusci-etd-template/blob/main/odusci.sty#L59))
 
 ### Chapters and Sections
 
@@ -146,15 +143,6 @@ Most of the customization you need to make is isolated to `main.tex`. Do not edi
 - Then use the `\input` command to insert the chapters into your main file, as shown in [lines 107-114](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L107-L114)
 - Start a new chapter with `\chapter{Chapter Title}`
 - Sections and subsections can be created as normal with `\section{Section Title}` and `\subsection{Section Title}`.
-
-> [!IMPORTANT]
-> **Known Issue**: When chapter or section titles are too long to fit on a single line in the TOC, the wrapping behavior may differ:
-> - Chapters: Wrapped lines align directly under the title text.
-> - Sections: Wrapped lines align after the section number.
->   
-> **Current Workaround**:
->  1. Use **shorter chapter and section titles** that fit on a single line.
->  2. Alternatively, define a **short title specifically for the TOC** using the `\chapter[Short Title for TOC]{This is the Full Chapter Title Used in the Document}` or `\section[Short Section Title for TOC]{This is the Full Section Title Used in the Document}` syntax.
 
 ### Figures and Tables
 
@@ -180,6 +168,13 @@ Most of the customization you need to make is isolated to `main.tex`. Do not edi
   
   In this example, `width=0.5\linewidth` scales the image to 50% of the current text width (`\linewidth`). You can change 0.5 to any decimal to adjust the image size relative to the line width (e.g., `0.3\linewidth` for 30% or `0.8\linewidth` for 80%).
 
+> [!IMPORTANT]
+> **Known Issue**: When figure or table captions are too long to fit on a single line in the TOC, the wrapping behavior may differ.  
+> **Current Workaround**:
+>  1. Use **shorter chapter and section titles** that fit on a single line.
+>  2. Alternatively, define a **short figure or table caption specifically for the TOC** using the `\caption[Short caption for TOC]{The full caption to be displayed in the document goes here}` syntax.
+
+
 ### Adding Code as Listing
 
 You can display code in your LaTeX document using the `listings` package, which allows you to customize the appearance of your code. Below is an example of how to include Python code with specific syntax highlighting. The custom settings applied here ensure that certain parts of the code are highlighted in red.
@@ -193,7 +188,7 @@ hello_world()
 \end{lstlisting}
 ```
 
-In **[main.tex]**, you can customize the formatting of the code listings on `\lstset` as desired.
+In `main.tex`, you can customize the formatting of the code listings on `\lstset` as desired.
 
 ```
 \lstset{
@@ -228,7 +223,7 @@ Equation \ref{eq:1} exemplifies a standard power series, demonstrating how to in
 
 - [`Chapters/98_appendices.tex`](https://github.com/oduwsdl/odusci-etd-template/blob/main/Chapters/98_appendices.tex) contains an example of specifying the appendices.Each new appendix should begin with the line `\achapter{Title of Appendix}`.
 
-- If your appendices are too long or require significant management, you can split them across multiple `.tex` files and then include them in **[main.tex]**.
+- If your appendices are too long or require significant management, you can split them across multiple `.tex` files and then include them in `main.tex`.
 
 ```
 \begin{Appendices}
