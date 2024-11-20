@@ -159,7 +159,8 @@ Most of the customization you need to make is isolated to `main.tex`. Do not edi
  
 - To achieve an optimal fit for figures and tables in your LaTeX document, you can adjust their width using percentages of either `\linewidth` (or `\textwidth`)
 
-  ``` \begin{figure}[tbh]
+  ```
+  \begin{figure}[tbh]
   \centering
   % Adjust the width here by setting a percentage of \linewidth
   \includegraphics[width=0.5\linewidth]{Figures/cos1.jpeg}
@@ -168,7 +169,34 @@ Most of the customization you need to make is isolated to `main.tex`. Do not edi
   \end{figure} 
   ```
   
-  In this example, `width=0.5\linewidth` scales the image to 50% of the current text width (`\linewidth`). You can change 0.5 to any decimal to adjust the image size relative to the line width (e.g., `0.3\linewidth` for 30% or `0.8\linewidth` for 80%). 
+  In this example, `width=0.5\linewidth` scales the image to 50% of the current text width (`\linewidth`). You can change 0.5 to any decimal to adjust the image size relative to the line width (e.g., `0.3\linewidth` for 30% or `0.8\linewidth` for 80%).
+
+### Adding Code as Listing
+
+You can display code in your LaTeX document using the `listings` package, which allows you to customize the appearance of your code. Below is an example of how to include Python code with specific syntax highlighting. The custom settings applied here ensure that certain parts of the code are highlighted in red.
+
+```
+\begin{lstlisting}[caption = Python Code Example]
+def hello_world():
+    @This part will be highlighted in red@
+    print("Hello, world!")
+hello_world()
+\end{lstlisting}
+```
+
+In **[main.tex]**, you can customize the formatting of the code listings on `\lstset` as desired.
+
+```
+\lstset{
+  basicstyle=\sffamily,        % Use a sans-serif font for the code
+  columns=fullflexible,        % Make the code formatting more flexible
+  frame=single,                % Add a frame around the code
+  breaklines=true,             % Enable line wrapping
+  moredelim=**[is][\color{red}]{@}{@}, % Highlight text between '@' symbols in red
+  escapechar=\%                % Define '%' as an escape character for special formatting
+}
+```
+
 
 ### Appendix
 
