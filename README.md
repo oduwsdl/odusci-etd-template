@@ -170,10 +170,8 @@ Most of the customization you need to make is isolated to `main.tex`. Do not edi
   In this example, `width=0.5\linewidth` scales the image to 50% of the current text width (`\linewidth`). You can change 0.5 to any decimal to adjust the image size relative to the line width (e.g., `0.3\linewidth` for 30% or `0.8\linewidth` for 80%).
 
 > [!IMPORTANT]
-> **Known Issue**: When figure or table captions are too long to fit on a single line in the TOC, the wrapping behavior may differ.  
-> **Current Workaround**:
->  1. Use **shorter chapter and section titles** that fit on a single line.
->  2. Alternatively, define a **short figure or table caption specifically for the TOC** using the `\caption[Short caption for TOC]{The full caption to be displayed in the document goes here}` syntax.
+> **Known Issue**: When figure or table captions are too long to fit on a single line in the TOC, the wrapping behavior may differ from the university's sample page.  
+> **Current Workaround**: Define a **short figure or table caption specifically for the TOC** using the `\caption[Short caption for TOC]{The full caption to be displayed in the document goes here}` syntax.
 
 
 ### Adding Code as Listing
@@ -222,7 +220,7 @@ Equation \ref{eq:1} exemplifies a standard power series, demonstrating how to in
 
 ### Appendix
 
-- [`Chapters/98_appendices.tex`](https://github.com/oduwsdl/odusci-etd-template/blob/main/Chapters/98_appendices.tex) contains an example of specifying the appendices.Each new appendix should begin with the line `\achapter{Title of Appendix}`.
+- [`Chapters/98_appendices.tex`](https://github.com/oduwsdl/odusci-etd-template/blob/main/Chapters/98_appendices.tex) contains an example of specifying the appendices. Each new appendix should begin with the line `\achapter{Title of Appendix}`.
 
 - If your appendices are too long or require significant management, you can split them across multiple `.tex` files and then include them in `main.tex`.
 
