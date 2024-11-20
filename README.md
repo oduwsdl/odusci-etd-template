@@ -1,7 +1,7 @@
 # ODU College of Sciences LaTeX ETD Template
 
 > [!IMPORTANT]
-> **JULY 18, 2024 UPDATE:** See the Overleaf version of `odusci.sty` for the most up-to-date version (see [diff](sty-diff.txt)).
+> **Last Updated: November 20, 2024**
 
 Welcome to the LaTeX Electronic Thesis and Dissertation (ETD) template for the College of Sciences at Old Dominion University. This template is designed to assist students in formatting their theses and dissertations according to the guidelines provided by the university. Those using this template must still abide by the guidelines and formatting requirements found in the [ODU Guide for Preparation of Theses and Dissertations](https://www.odu.edu/graduateschool/thesis-dissertation-preparation-submission) ([PDF](https://www.odu.edu/sites/default/files/2024/documents/thesis-dissertation-guide-03-2024.pdf), last updated March 2024).
 
@@ -45,13 +45,10 @@ Most of the customization you need to make is isolated to `main.tex`. Do not edi
 
 ### `odusci` Package options
 
-- The default setting of the `odusci` package is for PhD dissertations  
-  [`\usepackage{odusci}`](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L12)
-
 - For a Master's thesis, you can use the `thesis` option  
   `\usepackage[thesis]{odusci}`
 
-- The `diss` option can also be used for PhD dissertations, if desired  
+- For PhD dissertations, you can use the `diss` option
   `\usepackage[diss]{odusci}`
 
 ### References
@@ -60,7 +57,7 @@ Most of the customization you need to make is isolated to `main.tex`. Do not edi
 
 - Ensure that your bibliography file, [ref.bib](ref.bib), contains all the necessary references for your document.
 
-- If you want to use a different filename for your references, you must change the file referenced in [`\addbibresource{ref.bib}`](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L27) in `main.tex`.     
+- If you want to use a different filename for your references, you must change the file referenced in [`\addbibresource{ref.bib}`](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L22) in `main.tex`.     
 
 #### Reference Citation Style
    
@@ -75,9 +72,9 @@ Most of the customization you need to make is isolated to `main.tex`. Do not edi
 
 - Select the appropriate bibliography style for your field by uncommenting one of the following lines in `main.tex`:
 
-    [`% \usepackage[style=ieee, sorting=nyt, maxnames=10, minnames=10]{biblatex}`](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L20)  
-    [`% \usepackage[style=apa, sorting=nyt, maxnames=10, minnames=10]{biblatex}`](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L22)  
-    [`% \usepackage[style=science, sorting=nyt, maxnames=10, minnames=10]{biblatex}`](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L24)
+    [`% \usepackage[style=ieee, sorting=nyt, maxnames=10, minnames=10]{biblatex}`](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L15)  
+    [`% \usepackage[style=apa, sorting=nyt, maxnames=10, minnames=10]{biblatex}`](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L17)  
+    [`% \usepackage[style=science, sorting=nyt, maxnames=10, minnames=10]{biblatex}`](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L19)
 
 - If you want your references to be listed in the order they are cited in your text rather than alphabetically by first author's last name, change `sorting=nyt` to `sorting=none` in the `biblatex` options line.
 
@@ -85,7 +82,7 @@ Most of the customization you need to make is isolated to `main.tex`. Do not edi
 
 #### Title Page
 
-- Add the title, author name, prior degrees, department, submit date, and committee, starting on [line 33](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L33) in `main.tex`
+- Add the title, author name, prior degrees, department, submit date, and committee, starting on [line 33](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L39) in `main.tex`
    
 - If the prior degrees are outside of the US, use the following format. (University and country must be on the same line.)
   ```
@@ -101,7 +98,7 @@ Most of the customization you need to make is isolated to `main.tex`. Do not edi
   ```
 
 - If you have co-advisers, you must make adjustments in both `main.tex` and `odusci.sty`
-  * In **\[main.tex]**, comment out [lines 59-62](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L59-L62) and uncomment [lines 65-69](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L65-L69):
+  * In `main.tex`, comment out [lines 64-67](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L64-L67) and uncomment [lines 70-74](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L70-L74):
   ```
   \coadvisers{Director Name}
   \coadvisers{Director Name}
@@ -110,21 +107,21 @@ Most of the customization you need to make is isolated to `main.tex`. Do not edi
   \member{Member Name}
   ```
      
-  * In **\[odusci.sty]**, comment out `\onedirectortrue` ([line 65](https://github.com/oduwsdl/odusci-etd-template/blob/main/odusci.sty#L65)) and uncomment `\onedirectorfalse` ([line 66](https://github.com/oduwsdl/odusci-etd-template/blob/main/odusci.sty#L66))
+  * In `odusci.sty`, comment out `\onedirectortrue` ([line 82](https://github.com/oduwsdl/odusci-etd-template/blob/main/odusci.sty#L82)) and uncomment `\onedirectorfalse` ([line 83](https://github.com/oduwsdl/odusci-etd-template/blob/main/odusci.sty#L83))
    
 #### Abstract 
-- Insert your abstract starting on [line 76](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L76), ensuring it does not exceed a maximum of 350 words.
+- In `main.tex`, insert your abstract starting on [line 81](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L81), ensuring it does not exceed a maximum of 350 words.
 - The upper sections of the page, including the title, author, university, and director information, will be automatically generated based on the input provided on the title page. You do not need to make any modifications to the template regarding this section.
   
 #### Copyrights
 - This page will be automatically generated based on the input of the author's name on the title page. You do not need to make any modifications to the template regarding this section.
      
 #### Dedication 
-- Include your dedication starting on [line 79](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L79). Ensure that it does not exceed one page in length.
+- In `main.tex`, include your dedication starting on [line 84](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L84). Ensure that it does not exceed one page in length.
 - This section is used to recognize those who have supported you during your graduate studies.
      
 #### Acknowledgments 
-- Include your acknowledgements starting on [line 82](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L82)
+- In `main.tex`, include your acknowledgements starting on [line 87](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L87)
 - This section is for recognition of individuals who contributed to your academic research should be provided here.
 - Note that if you want multiple paragraphs, you must explicitly add newline and indent commands: `\\ \indent`
      
@@ -134,16 +131,16 @@ Most of the customization you need to make is isolated to `main.tex`. Do not edi
 #### Nomenclature
   If you need to add a Nomenclature list, you must made adjustments in both `main.tex` and `odusci.sty`
 
-- In **\[main.tex]**
+- In `main.tex`
 
-  The nomenclature page provides a comprehensive list of symbols and abbreviations used throughout the document, along with their corresponding definitions or explanations. Add your nomenclature in the provided format in the template ([lines 88-95](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L88-L95)). The inclusion of a nomenclature page is optional.
+  The nomenclature page provides a comprehensive list of symbols and abbreviations used throughout the document, along with their corresponding definitions or explanations. Add your nomenclature in the provided format in the template ([lines 93-100](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L93-L100)). The inclusion of a nomenclature page is optional.
 
-- In **\[odusci.sty]**, comment out `\nomenclaturefalse` ([line 58](https://github.com/oduwsdl/odusci-etd-template/blob/main/odusci.sty#L58)) and uncomment `\nomenclaturetrue` ([line 59](https://github.com/oduwsdl/odusci-etd-template/blob/main/odusci.sty#L59))
+- In `odusci.sty`, comment out `\nomenclaturefalse` ([line 75](https://github.com/oduwsdl/odusci-etd-template/blob/main/odusci.sty#L75)) and uncomment `\nomenclaturetrue` ([line 76](https://github.com/oduwsdl/odusci-etd-template/blob/main/odusci.sty#L76))
 
 ### Chapters and Sections
 
 - It is recommended to put the contents of each chapter in a separate .tex file in the "Chapters" folder.
-- Then use the `\input` command to insert the chapters into your main file, as shown in [lines 107-114](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L107-L114)
+- Then use the `\input` command to insert the chapters into your main file, as shown in [lines 112-119](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L112-L119)
 - Start a new chapter with `\chapter{Chapter Title}`
 - Sections and subsections can be created as normal with `\section{Section Title}` and `\subsection{Section Title}`.
 
@@ -152,14 +149,91 @@ Most of the customization you need to make is isolated to `main.tex`. Do not edi
 - Figures, tables, and equations can be added as normal. There are several examples of these throughout the example document:
 
   - figure - [01_introduction.tex](https://github.com/oduwsdl/odusci-etd-template/blob/main/Chapters/01_introduction.tex#L10)
-  - subfigure - [02_background.tex](https://github.com/oduwsdl/odusci-etd-template/blob/main/Chapters/02_background.tex#L23)
-  - landscape figure - [02_background.tex](https://github.com/oduwsdl/odusci-etd-template/blob/main/Chapters/02_background.tex#L45)
-  - equation - [02_background.tex](https://github.com/oduwsdl/odusci-etd-template/blob/main/Chapters/02_background.tex#L39)
+  - subfigure - [02_background.tex](https://github.com/oduwsdl/odusci-etd-template/blob/main/Chapters/02_background.tex#L28)
+  - landscape figure - [02_background.tex](https://github.com/oduwsdl/odusci-etd-template/blob/main/Chapters/02_background.tex#L50)
+  - equation - [02_background.tex](https://github.com/oduwsdl/odusci-etd-template/blob/main/Chapters/02_background.tex#L40)
   - table - [03_relatedwork.tex](https://github.com/oduwsdl/odusci-etd-template/blob/main/Chapters/03_relatedwork.tex#L17)
+  - long table - [03_concordia.tex](https://github.com/oduwsdl/odusci-etd-template/blob/main/Chapters/06_concordia.tex#L84)
+ 
+- To achieve an optimal fit for figures and tables in your LaTeX document, you can adjust their width using percentages of either `\linewidth` (or `\textwidth`)
+
+  ```
+  \begin{figure}[tbh]
+  \centering
+  % Adjust the width here by setting a percentage of \linewidth
+  \includegraphics[width=0.5\linewidth]{Figures/cos1.jpeg}
+  \caption[The figure title goes here.]{The figure title goes here.}
+  \label{fig:cos1}
+  \end{figure} 
+  ```
+  
+  In this example, `width=0.5\linewidth` scales the image to 50% of the current text width (`\linewidth`). You can change 0.5 to any decimal to adjust the image size relative to the line width (e.g., `0.3\linewidth` for 30% or `0.8\linewidth` for 80%).
+
+> [!IMPORTANT]
+> **Known Issue**: When figure or table captions are too long to fit on a single line in the TOC, the wrapping behavior may differ.  
+> **Current Workaround**:
+>  1. Use **shorter chapter and section titles** that fit on a single line.
+>  2. Alternatively, define a **short figure or table caption specifically for the TOC** using the `\caption[Short caption for TOC]{The full caption to be displayed in the document goes here}` syntax.
+
+
+### Adding Code as Listing
+
+You can display code in your LaTeX document using the `listings` package, which allows you to customize the appearance of your code. Below is an example of how to include Python code with specific syntax highlighting. The custom settings applied here ensure that certain parts of the code are highlighted in red.
+
+```
+\begin{lstlisting}[caption = Python Code Example]
+def hello_world():
+    @This part will be highlighted in red@
+    print("Hello, world!")
+hello_world()
+\end{lstlisting}
+```
+
+In `main.tex`, you can customize the formatting of the code listings on `\lstset` as desired.
+
+```
+\lstset{
+  basicstyle=\sffamily,        % Use a sans-serif font for the code
+  columns=fullflexible,        % Make the code formatting more flexible
+  frame=single,                % Add a frame around the code
+  breaklines=true,             % Enable line wrapping
+  moredelim=**[is][\color{red}]{@}{@}, % Highlight text between '@' symbols in red
+  escapechar=\%                % Define '%' as an escape character for special formatting
+}
+```
+### Adding URLs
+
+To add URLs to your document, you can use the `\url` command provided by the `url` package in LaTeX. This command formats the URL in a typewriter font and enables line-breaking for long URLs that do not fit on a single line.
+
+```
+For more information, visit \url{https://github.com/oduwsdl/odusci-etd-template/blob/main/README.md}
+```
+### Adding Equations
+
+To include equations in your LaTeX document, you can use the `equation` environment for numbered equations and the `\ref` command to reference them later in the text.
+
+```
+Equation \ref{eq:1} exemplifies a standard power series, demonstrating how to include equations in your document.
+
+\begin{equation} \label{eq:1}
+\sum_{i=0}^{\infty} a_i x^i
+\end{equation}
+```
 
 ### Appendix
 
-- [`Chapters/98_appendices.tex`](https://github.com/oduwsdl/odusci-etd-template/blob/main/Chapters/98_appendices.tex) contains an example of specifying the appendices. The file starts with the keyword `\appendix` and each new appendix should begin with the line `\achapter{Title of Appendix}`.
+- [`Chapters/98_appendices.tex`](https://github.com/oduwsdl/odusci-etd-template/blob/main/Chapters/98_appendices.tex) contains an example of specifying the appendices.Each new appendix should begin with the line `\achapter{Title of Appendix}`.
+
+- If your appendices are too long or require significant management, you can split them across multiple `.tex` files and then include them in `main.tex`.
+
+```
+\begin{Appendices}
+\include{Chapters/98_appendices}           % First appendix file
+\include{Chapters/98_appendices2}          % Second appendix file
+% You can add more .tex files as needed
+\end{Appendices}
+```
+
 
 ### Vita
 
