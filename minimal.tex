@@ -5,14 +5,9 @@
 \documentclass[12pt]{report}
 
 %%%%% Thesis or Dissertation Selection %%%%% 
-%% For MS thesis, comment out the \usepackage{odusci} line (line 13) and 
-%% uncomment the \usepackage[thesis]{odusci} line (line 17)
-
-%% The default is for PhD dissertations
-\usepackage{odusci}
-%\usepackage[diss]{odusci}  % alternate PhD package specification
-%% Uncomment this line for MS thesis
-%\usepackage[thesis]{odusci}  
+\usepackage[diss]{odusci}  
+% for MS thesis, replace diss with thesis
+% \usepackage[thesis]{odusci}
 
 %%%%% Citation Style %%%%% 
 %% Uncomment the appropriate line for your discipline
@@ -90,6 +85,14 @@ Morbi vulputate feugiat diam, rhoncus vehicula eros posuere vitae. Pellentesque 
 %%%%% REFERENCES %%%%% 
 \addtocontents{toc}{\vspace*{12pt}} % gap between last chapter and references in the table of contents
 \printbibliography[heading=bibintoc, title={REFERENCES}]
+
+%%%%% APPENDICES %%%%% 
+%% Comment the lines below if you do not have any appendices
+%\begin{Appendices}
+%\include{Chapters/98_appendices} % First appendix file
+%\include{Chapters/98_appendices2} % Second appendix file
+% You can add more .tex files as needed
+%\end{Appendices}
 
 %%%%% VITA - max 1 page %%%%% 
 \include{Chapters/99_vita}
