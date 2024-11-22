@@ -48,7 +48,7 @@ Most of the customization you need to make is isolated to `main.tex`. Do not edi
 - For a Master's thesis, you can use the `thesis` option  
   `\usepackage[thesis]{odusci}`
 
-- For PhD dissertations, you can use the `diss` option
+- For PhD dissertations, you can use the `diss` option  
   `\usepackage[diss]{odusci}`
 
 ### References
@@ -82,12 +82,12 @@ Most of the customization you need to make is isolated to `main.tex`. Do not edi
 
 #### Title Page
 
-- Add the title, author name, prior degrees, department, submit date, and committee, starting on [line 33](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L39) in `main.tex`
+- Add the title, author name, prior degrees, department, submit date, and committee, starting on [line 39](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L39) in `main.tex`
    
 - If the prior degrees are outside of the US, use the following format. (University and country must be on the same line.)
   ```
-  \degrees{B.S. July 2017, University of Oxford, United Kingdom. \\
-  M.S. July 2020, University of Oxford, United Kingdom.}
+  \degrees{B.S. July 2017, University of Oxford, United Kingdom \\
+  M.S. July 2020, University of Oxford, United Kingdom}
   ```
 
 - The submit date must use either "May", "August", or "December" for the month:
@@ -153,7 +153,7 @@ Most of the customization you need to make is isolated to `main.tex`. Do not edi
   - landscape figure - [02_background.tex](https://github.com/oduwsdl/odusci-etd-template/blob/main/Chapters/02_background.tex#L50)
   - equation - [02_background.tex](https://github.com/oduwsdl/odusci-etd-template/blob/main/Chapters/02_background.tex#L40)
   - table - [03_relatedwork.tex](https://github.com/oduwsdl/odusci-etd-template/blob/main/Chapters/03_relatedwork.tex#L17)
-  - long table - [03_concordia.tex](https://github.com/oduwsdl/odusci-etd-template/blob/main/Chapters/06_concordia.tex#L84)
+  - long table - [06_concordia.tex](https://github.com/oduwsdl/odusci-etd-template/blob/main/Chapters/06_concordia.tex#L84)
  
 - To achieve an optimal fit for figures and tables in your LaTeX document, you can adjust their width using percentages of either `\linewidth` (or `\textwidth`)
 
