@@ -1,7 +1,7 @@
 # ODU College of Sciences LaTeX ETD Template
 
 > [!IMPORTANT]
-> **Last Updated: November 20, 2024**
+> **Last Updated: July 16, 2025**
 
 Welcome to the LaTeX Electronic Thesis and Dissertation (ETD) template for the College of Sciences at Old Dominion University. This template is designed to assist students in formatting their theses and dissertations according to the guidelines provided by the university. Those using this template must still abide by the guidelines and formatting requirements found in the [ODU Guide for Preparation of Theses and Dissertations](https://www.odu.edu/graduateschool/thesis-dissertation-preparation-submission) ([PDF](https://www.odu.edu/sites/default/files/2024/documents/thesis-dissertation-guide-03-2024.pdf), last updated March 2024).
 
@@ -72,11 +72,12 @@ Most of the customization you need to make is isolated to `main.tex`. Do not edi
 
 - Select the appropriate bibliography style for your field by uncommenting one of the following lines in `main.tex`:
 
-    [`% \usepackage[style=ieee, sorting=nyt, maxnames=10, minnames=10]{biblatex}`](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L15)  
+    [`% \usepackage[style=ieee, sorting=nyt, citestyle=numeric-comp, maxnames=10, minnames=10]{biblatex}`](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L15)  
     [`% \usepackage[style=apa, sorting=nyt, maxnames=10, minnames=10]{biblatex}`](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L17)  
     [`% \usepackage[style=science, sorting=nyt, maxnames=10, minnames=10]{biblatex}`](https://github.com/oduwsdl/odusci-etd-template/blob/main/main.tex#L19)
 
 - If you want your references to be listed in the order they are cited in your text rather than alphabetically by first author's last name, change `sorting=nyt` to `sorting=none` in the `biblatex` options line.
+- If you are using IEEE style and do not want multiple citations placed in the same brackets (i.e., [1, 3, 7]), then remove `citestyle=numeric-comp,` from the options.
 
 ### Front Matter
 
