@@ -170,6 +170,10 @@ Most of the customization you need to make is isolated to `main.tex`. Do not edi
   
   In this example, `width=0.5\linewidth` scales the image to 50% of the current text width (`\linewidth`). You can change 0.5 to any decimal to adjust the image size relative to the line width (e.g., `0.3\linewidth` for 30% or `0.8\linewidth` for 80%).
 
+  You can also use options to `includegraphics` to crop images.
+  * format: `\includegraphics[trim=left bottom right top, clip]{file}`
+  * example: `\includegraphics[trim=100 40 150 150,clip,width=\linewidth]{crab}`
+
 > [!IMPORTANT]
 > **Known Issue**: When figure or table captions are too long to fit on a single line in the TOC, the wrapping behavior may differ from the university's sample page.  
 > **Current Workaround**: Define a **short figure or table caption specifically for the TOC** using the `\caption[Short caption for TOC]{The full caption to be displayed in the document goes here}` syntax.
