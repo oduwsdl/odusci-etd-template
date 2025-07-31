@@ -7,6 +7,8 @@ Welcome to the LaTeX Electronic Thesis and Dissertation (ETD) template for the C
 
 Note that using this template removes the requirement that you submit a "journal model" with your thesis or dissertation, as noted on the College of Sciences [Check-in Sheet](https://www.odu.edu/sites/default/files/documents/check-in.pdf). You just need to check the box on the form that you have used the LaTeX template.
 
+For more information on the review process, see the [College of Sciences Thesis & Dissertation Review Procedures](https://www.odu.edu/sci/students/graduate/thesis).
+
 ## Before You Begin
 
 - Please refrain from altering the spacing on any of the pages, as it is specified according to the guidelines provided by the College of Science.
